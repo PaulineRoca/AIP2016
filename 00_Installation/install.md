@@ -45,8 +45,8 @@ When you download an installer file for a software, it is very important to:
 2. just download the file, not execute it, so please de-activate any internet browser preference that would automatically execute a file upon download completion, and for Windows users, make sure you always select the `save the file as` option when the usual dialog window pops up for a download.
 
 Select the download instructions for your operating system:  
+[Downloads for Windows](#downloads-for-windows)  
 [Downloads for Mac OS](#downloads-for-mac-os)  
-[Downloads for Windows](#downloads-for-windows)
 [Downloads for Debian based Linux](#downloads-for-debian-based-linux)
 
 Installation instructions
@@ -63,10 +63,9 @@ Some installations, especially components for pygame on Mac OS, are rather trick
 Same if something does not work as expected, stop there and ask for our help on Tuesday morning.
 
 Select the installation instructions for your operating system:  
-[Linux](#linux-debian-based)  
-[Mac OS](#mac-os)  
-[Windows](#windows)
-
+[Installations for Windows](#installations-for-windows)  
+[Installations for Mac OS](#installations-for-mac-os)  
+[Installations for Debian based Linux](#installations-for-debian-based-linux)  
 Once the installation on your computer completed, you can browse the documents in [the ressource folder](../resources/)
 
 __________________________________________________
@@ -116,7 +115,7 @@ __________________________________________________
 
 __________________________________________________
 
-## Windows
+## Installations for Windows
 
 ### Scratch
 1. Open a file explorer (windows key + e) and open the directory in which you downloaded the installer file `ScratchInstaller1.4.exe`, typically the default `Downloads` directory.
@@ -252,7 +251,7 @@ __________________________________________________
 
 __________________________________________________
 
-## Mac OS
+## Installations for Mac OS
 
 ### Warming up
 1. Know you system version, so you can chose which file to download
@@ -482,7 +481,7 @@ Otherwise, stay up for some more fun with the terminal!
 
 __________________________________________________
 
-## Linux debian based
+## Installations for Debian based Linux
 
 ### Python
 
