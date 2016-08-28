@@ -47,6 +47,7 @@ When you download an installer file for a software, it is very important to:
 Select the download instructions for your operating system:  
 [Downloads for Mac OS](#downloads-for-mac-os)  
 [Downloads for Windows](#downloads-for-windows)
+[Downloads for Debian based Linux](#downloads-for-debian-based-linux)
 
 Installation instructions
 -------------------------
@@ -75,6 +76,8 @@ __________________________________________________
 First, you need to know whether you are using a 64 bits or a 32 bits version of Windows,
 follow the instructions [on this website](http://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/)
 
+If you are using windows 7, it might be useful to know the full name of your files, so open a file explorer (window + e), then select the `Organize` menu, then `Folder and search options`, then the second tab `View`, uncheck the
+
 ### Scratch
 * To download the Scratch installer file `ScratchInstaller1.4.exe`, use a right click on [this link](http://download.scratch.mit.edu/ScratchInstaller1.4.exe) and the option `Save target as`, and select an appropriate directory, for example the default `Downloads` folder. You can alternatively download the installer file directly from the webpage http://download.scratch.mit.edu/
 
@@ -100,10 +103,16 @@ Download the lattest `GitHub Desktop` installer using [this link](https://github
  * If you have a 64 bits Windows, download the Windows 64-Bit Python 2.7 Graphical Installer `Anaconda2-4.1.1-Windows-x86_64.exe` from [this link](https://repo.continuum.io/archive/Anaconda2-4.1.1-Windows-x86_64.exe) of directly from https://www.continuum.io/downloads
  * if you have a 32 bit Windows XP, then download instead the Windows 32-Bit Python 2.7 Graphical Installer `Anaconda2-4.1.1-Windows-x86.exe` from [this link](https://repo.continuum.io/archive/Anaconda2-4.1.1-Windows-x86.exe) or directly from https://www.continuum.io/downloads
 
+### Python documentation
+ * [this link](https://docs.python.org/2.7/archives/python-2.7.12-docs-html.zip) from https://docs.python.org/2.7/download.html
 
 __________________________________________________
 
 ## Downloads for Mac OS
+
+__________________________________________________
+
+## Downloads for Debian based Linux
 
 __________________________________________________
 
