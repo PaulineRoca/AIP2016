@@ -300,15 +300,15 @@ __________________________________________________
  * click on `All the programs` and then the `Anaconda (64-bit)` folder, what you are looking for is the `IPython (Py 2.7)` entry. Click there (and not the `IPython (Py 2.7) Notebook` nor the `IPython (Py 2.7) QTConsole`).
  * this launches a window that understands only commands in the python language
  * in just after the `$` sign, type each of those lines one by one followed by a stroke on the `Enter` key
-     ```
-     import numpy as np
-     import matplotlib.pyplot as plt
-     from scipy import stats
-     x=np.arange(-5,5,.1)
-     y=stats.norm.pdf(x)
-     plt.plot(x,y)
-     plt.show()
-     ```
+ ```
+ import numpy as np
+ import matplotlib.pyplot as plt
+ from scipy import stats
+ x=np.arange(-5,5,.1)
+ y=stats.norm.pdf(x)
+ plt.plot(x,y)
+ plt.show()
+ ```
  * close the window with the graph
  * close the ipython shell by typing `quit()` or the keyboard shortcut `ctrl + D`
 3. Installing pygame
