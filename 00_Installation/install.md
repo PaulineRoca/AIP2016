@@ -506,10 +506,10 @@ then, hit the `Enter` key.
  * close the ipython shell by typing `quit()` or the keyboard shortcut `ctrl + D`
  * you are now back to the command line in the Terminal application.
 
-0. **Warning** Now the Mac python install procedure starts to be tricky, if you don't feel confident with typing commands in a terminal, of if you'd like to sleep, stop rigth now, we will carry on Tuesday morning.  
+3. **Warning** Now the Mac python install procedure starts to be tricky, if you don't feel confident with typing commands in a terminal, of if you'd like to sleep, stop rigth now, we will carry on Tuesday morning.  
 Otherwise, stay up for some more fun with the terminal!
 
-7. Install "Homebrew
+4. Install "Homebrew
  * in a terminal, copy paste or type this command:
      ```
      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -533,7 +533,7 @@ Otherwise, stay up for some more fun with the terminal!
 
  * **If and only if** the doctor gave its green light, you can Now close (by typing `exit` and then closing the windows with the `cmd+W` key stroke combination) all your instances of the terminal application, quit the application `cmd+Q` and relaunch it.
 
-8. Install pygame dependencies
+5. Install pygame dependencies
  * with the following command:
      ```
      brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
