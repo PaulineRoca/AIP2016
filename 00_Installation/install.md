@@ -315,16 +315,16 @@ __________________________________________________
  * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
  * click on `All the programs` and then the `Anaconda2 64bits` folder, then on `Anaconda Prompt`
  * this launches the anaconda terminal, where you have to type this text and then press on the `Enter` key (this is called "executing a command", more on that in the first Info lectures!):
-    ```
-    conda install conda
-    ```
-    You have to type it where a little rectangle is blinking (this is the "prompt"), after something that looks like `C:Users\your_account_name\AppData\Local\Continuum\Anaconda2>`
-    You will see some text messages during the installation of some python modules, don't worry!
+ ```
+ conda install conda
+ ```
+ You have to type it where a little rectangle is blinking (this is the "prompt"), after something that looks like `C:Users\your_account_name\AppData\Local\Continuum\Anaconda2>`
+ You will see some text messages during the installation of some python modules, don't worry!
  * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default)
  * when you are back to the blinking little rectangle, type this text, then press the `Enter` key:
-    ```
-    conda install -c cogsci pygame=1.9.2a0
-    ```
+ ```
+ conda install -c cogsci pygame=1.9.2a0
+ ```
  * When the installation of pygame is over, you can even type `exit` and press on `Enter` to close the window, how convenient!
 4. Testing pygame
   1. First test
