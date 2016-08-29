@@ -813,91 +813,81 @@ shortcut `ctrl + D`
 
 ### Git
 1. Download et installation
-
-```
-sudo apt-get install git-core
-```
+   ```
+   sudo apt-get install git-core
+   ```
 
 2. Configuration, by typing in a terminal with the appropriate replacements
-
-```
-git config --global user.name "your_user_name"
-git config --global user.email your_email@example.com
-```
+   ```
+   git config --global user.name "your_user_name"
+   git config --global user.email your_email@example.com
+   ```
 
 ### Scratch
 1. Installation: in a terminal, type
-
-```
-sudo apt-get install scratch
-```
+   ```
+   sudo apt-get install scratch
+   ```
 
 2. Test : in the terminal of a graphic console, type
+   ```
+   scratch
+   ```
 
-```
-scratch
-```
-
-You should see a new window, where you should be able to grab and move
-the little mascot.
+   You should see a new window, where you should be able to grab and move the little mascot.
 
 
 ### R
 
 The instructions to install R are available here:
 <https://cran.r-project.org/bin/linux/ubuntu/README.html#installation>
-
 1. Setup
- * Check which linux exactly you are using with the following command
+  * Check which linux exactly you are using with the following command
+     ```
+     lsb_release -da
+     ```
 
-```
-   lsb_release -da
-```
+     You should see an output like this one:
 
-You should see an output like this one:
+     ```
+     Distributor ID: Debian
+     Description :   Debian GNU/Linux 7.8 (wheezy)
+     Release:        7.8
+     Codename:       wheezy
+     ```
 
-```
-    Distributor ID: Debian
-    Description :   Debian GNU/Linux 7.8 (wheezy)
-    Release:        7.8
-    Codename:       wheezy
-```
+  * add the appropriate repository to your `/etc/apt/sources.list`
+     ```
+     sudo sh -c 'echo deb http://cran.univ-paris1.fr/bin/linux/debian
+     wheezy-cran3/ >> /etc/apt/sources.list'
+     ```
 
- * add the appropriate repository to your `/etc/apt/sources.list`
+     For Ubuntu, you migh have to leave out the -cran3 after the version codename
 
-```
-sudo sh -c 'echo deb http://cran.univ-paris1.fr/bin/linux/debian
-wheezy-cran3/ >> /etc/apt/sources.list'
-```
-
-For Ubuntu, you migh have to leave out the -cran3 after the version codename
-
-```
-    sudo sh -c 'echo deb http://cran.univ-paris1.fr/bin/linux/ubuntu
+     ```
+     sudo sh -c 'echo deb http://cran.univ-paris1.fr/bin/linux/ubuntu
 vivid/ >> /etc/apt/sources.list'
-```
+     ```
 
 
- * update your repository list by executing
-
-```
-sudo apt-get update
-```
+  * update your repository list by executing
+     ```
+     sudo apt-get update
+     ```
 
 2. Install R
-* In a terminal, run the apt install command
-```
-sudo apt-get install r-base r-base-core r-base-html
-```
+  * In a terminal, run the apt install command
+     ```
+     sudo apt-get install r-base r-base-core r-base-html
+     ```
 
 ### Rstudio
 1. Installation
- * in a terminal, execute the following command, replacing the XX by the version numbers
-
-```
-    sudo apt-get install libjpeg62
-    sudo dpkg -i rstudio-X.XX.XXX-amd64.deb
-```
+  * in a terminal, execute the following command, replacing the XX by the version numbers
+     ```
+     sudo apt-get install libjpeg62
+     sudo dpkg -i rstudio-X.XX.XXX-amd64.deb
+     ```
 
 2. Verification
  * type `rstudio` in a console to lauch the R interpreter
