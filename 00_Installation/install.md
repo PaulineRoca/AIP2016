@@ -66,6 +66,7 @@ Select the installation instructions for your operating system:
 [Installations for Windows](#installations-for-windows)  
 [Installations for Mac OS](#installations-for-mac-os)  
 [Installations for Debian based Linux](#installations-for-debian-based-linux)  
+
 Once the installation on your computer completed, you can get some reading material from the teachers (you will be able to get if on the following courses if you succesfully installed everything at home and thus don't need to come tomorrow morning)
 
 __________________________________________________
@@ -116,12 +117,10 @@ __________________________________________________
 1. Know you system version, so you can chose which file to download
  * First go to the "apple" menu by clicking on the apple icon at the upper-left corner of the screen.
  * Select "About This Mac", and look at the Version number, the first two numbers are the major releases:
-
-| 10.4 | 10.5 | 10.6 | 10.7 | 10.8 | 10.9 | 10.10 | 10.11 |
-|------|------|------|------|------|------|-------|-------|
-| Tiger | Leopard | Snow Leopard | Lion | Mountain Lion | Mavericks | Yosemite | El Capitan |
-| 2005 | 2007 | 2009 | 2011 | 2012 | 2013 | 2014 | 2015 |
-
+  | 10.4 | 10.5 | 10.6 | 10.7 | 10.8 | 10.9 | 10.10 | 10.11 |
+  |------|------|------|------|------|------|-------|-------|
+  | Tiger | Leopard | Snow Leopard | Lion | Mountain Lion | Mavericks | Yosemite | El Capitan |
+  | 2005 | 2007 | 2009 | 2011 | 2012 | 2013 | 2014 | 2015 |
  * Check that your version of Mac OS X is 10.9 or higher (for example 10.9.5 or 10.11.2 are higher, but 10.6.10 is lower). If not or if you can't or don't want to risk an upgrade this evening, or if you are not sure, **stop right now, don't download or install anything, and come see us tomorrow at 9:00 am**: you might be in one of the most complicated situations regarding software installations.
 
 ### XQuartz
