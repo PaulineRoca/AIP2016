@@ -117,15 +117,16 @@ __________________________________________________
 1. Know you system version, so you can chose which file to download
  * First go to the "apple" menu by clicking on the apple icon at the upper-left corner of the screen.
  * Select "About This Mac", and look at the Version number, the first two numbers are the major releases:
- 
+
   | 10.4 | 10.5 | 10.6 | 10.7 | 10.8 | 10.9 | 10.10 | 10.11 |
   |------|------|------|------|------|------|-------|-------|
   | Tiger | Leopard | Snow Leopard | Lion | Mountain Lion | Mavericks | Yosemite | El Capitan |
   | 2005 | 2007 | 2009 | 2011 | 2012 | 2013 | 2014 | 2015 |
- * Check that your version of Mac OS X is 10.9 or higher (for example 10.9.5 or 10.11.2 are higher, but 10.6.10 is lower). If not or if you can't or don't want to risk an upgrade this evening, or if you are not sure, **stop right now, don't download or install anything, and come see us tomorrow at 9:00 am**: you might be in one of the most complicated situations regarding software installations.
+ * Check that your version of Mac OS X is 10.9 or higher (for example 10.9.5 or 10.11.2 are higher, but 10.6.10 is lower).  
+ If not or if you can't or don't want to risk an upgrade this evening, or if you are not sure, **stop right now, don't download or install anything, and come see us tomorrow at 9:00 am**: you might be in one of the most complicated situations regarding software installations.
 
 ### XQuartz
-* Download `XQuartz-2.7.9.dmg` by clicking on [this link](https://dl.bintray.com/xquartz/downloads/XQuartz-2.7.9.dmg) or from [https://www.xquartz.org/]
+* Download `XQuartz-2.7.9.dmg` by clicking on [this link](https://dl.bintray.com/xquartz/downloads/XQuartz-2.7.9.dmg) or from https://www.xquartz.org
 
 ### Python documentation
 * Download the archive of the official python documentation `python-2.7.12-docs-html.zip` with [this link](https://docs.python.org/2.7/archives/python-2.7.12-docs-html.zip) from https://docs.python.org/2.7/download.html, where you can also download a pdf version if you prefer.
@@ -856,7 +857,7 @@ The instructions to install R are available here:
 <https://cran.r-project.org/bin/linux/ubuntu/README.html#installation>
 
 1. Setup
- * [ ] Check which linux exactly you are using with the following command
+ * Check which linux exactly you are using with the following command
 
 ```
    lsb_release -da
@@ -871,7 +872,7 @@ You should see an output like this one:
     Codename:       wheezy
 ```
 
- * [ ] add the appropriate repository to your `/etc/apt/sources.list`
+ * add the appropriate repository to your `/etc/apt/sources.list`
 
 ```
 sudo sh -c 'echo deb http://cran.univ-paris1.fr/bin/linux/debian
@@ -886,14 +887,15 @@ vivid/ >> /etc/apt/sources.list'
 ```
 
 
- * update your repository list
+ * update your repository list, then execute the apt install commands
 
 ```
 sudo apt-get update
 sudo apt-get install r-base r-base-core r-base-html
 ```
 
- * [ ] and, for Rstudio, replacing the XX by the version numbers
+### Rstudio
+ * in a terminal, execute the following command, replacing the XX by the version numbers
 
 ```
     sudo apt-get install libjpeg62
