@@ -538,7 +538,7 @@ Otherwise, stay up for some more fun with the terminal!
      ```
      brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
      ```
-     
+
  * wait
 
 9. Install "conda"
@@ -584,9 +584,9 @@ Otherwise, stay up for some more fun with the terminal!
  * you should see one line explicitely describing the succession of the directories from `/Users` to the file `chimp.py` (we call that the "path" to the `chimp.py` file, more on that in the following courses)
 
  * then still in the terminal, execute the following command, replacing `the_line_with_the_succession_of_folders_that_ends_with_chimp.py` by the one you just found in the previous step (use copy and paste if needed)
- ```
- python the_line_with_the_succession_of_folders_that_ends_with_chimp.py
- ```
+    ```
+    python the_line_with_the_succession_of_folders_that_ends_with_chimp.py
+    ```
 
  * if you have trouble with the previous command execute the following command
     ```
