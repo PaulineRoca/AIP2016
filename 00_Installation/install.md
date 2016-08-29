@@ -241,7 +241,6 @@ __________________________________________________
  * click on the `Sign up for Github` button
 
 1. Installations
-
  * If you are usign a 64 bits version of Windows
 
   1. Installation
