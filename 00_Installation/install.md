@@ -117,6 +117,7 @@ __________________________________________________
 1. Know you system version, so you can chose which file to download
  * First go to the "apple" menu by clicking on the apple icon at the upper-left corner of the screen.
  * Select "About This Mac", and look at the Version number, the first two numbers are the major releases:
+ 
   | 10.4 | 10.5 | 10.6 | 10.7 | 10.8 | 10.9 | 10.10 | 10.11 |
   |------|------|------|------|------|------|-------|-------|
   | Tiger | Leopard | Snow Leopard | Lion | Mountain Lion | Mavericks | Yosemite | El Capitan |
