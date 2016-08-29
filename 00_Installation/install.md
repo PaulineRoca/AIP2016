@@ -755,7 +755,7 @@ shortcut `ctrl + D`
 12. Installing expyriment
   1. install expyriment from the terminal
      * launch a terminal if it's not done already
-     * execute the following command (type the text, then press on the `Enter` key):
+     * execute the following command:
      ```
      pip install expyriment
      ```
@@ -768,42 +768,45 @@ shortcut `ctrl + D`
      * quit the terminal then lauch it again, if needed, log out and log back in
 
 13. Testing expyriment
-     1. open a Terminal
-     2. Launch the ipython console by executing the command
-     ```
-     ipython
-     ```
-     3. In this ipython console, once you see the `In [1]: ` and the blinking cursor, type or copy paste the following lines one by one
+  0. log in your session
+  1. open a Terminal
+  2. Launch the ipython console by executing the command
+  ```
+  ipython
+  ```
+  3. In this ipython console, once you see the `In [1]: ` and the blinking cursor, type or copy paste the following lines one by one
+  ```
+  import expyriment
+  ```
 
-    ```
-    import expyriment
-    ```
+  ```
+  exp = expyriment.design.Experiment(name="test")
+  ```
 
-    ```
-    exp = expyriment.design.Experiment(name="test")
-    ```
+  ```
+  expyriment.control.initialize(exp)
+  ```
 
-    ```
-    expyriment.control.initialize(exp)
-    ```
+  Then you should see this message:  
+  > Python is running in an interactive shell but Expyriment wants to initialize a fullscreen
+  > Do you want to switch to windows mode? (Y/n)
 
-    Then you should see this message:  
-    > Python is running in an interactive shell but Expyriment wants to initialize a fullscreen
-    > Do you want to switch to windows mode? (Y/n)
+  4. Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type"ye  then hit `Enter`).
 
-    Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes"then hit `Enter`).
+  5. Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message  displayed
+  6. Select the python window and execute the following command:
+  ```
+  expyriment.control.start()
+  ```
 
-    Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Ready" message is dosplayed
+  7. Then you should select the expyriment window and hit `Enter` to validate the subject number.  
+  The windows should now diplay "Ready". Hit `Enter` a second time to validate.
+  8. Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute thefollowi  command to finish the experiment and close the window:
+  ```
+  expyriment.control.end()
+  ```
 
-    ```
-    expyriment.control.start()
-    ```
-
-    ```
-    expyriment.control.end()
-    ```
-
-    You can now exit the ipython console
+  You can now exit the ipython console
 
 
 ### Git
