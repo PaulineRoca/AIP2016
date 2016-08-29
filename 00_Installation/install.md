@@ -321,7 +321,7 @@ __________________________________________________
  ```
  conda install conda
  ```
- You will see some text messages during the installation of some python modules, don't worry!
+ * you will see some text messages during the installation of some python modules, don't worry!
  * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default)
  * when you are back to the blinking little rectangle, type this text, then press the `Enter` key:
  ```
@@ -342,8 +342,9 @@ __________________________________________________
      pygame.time.wait(3000)
      pygame.quit()
      ```
-    You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
+    * You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
     * press the keys `ctrl+D` and confirm your will to exit in order to quit the ipython console
+    * if all these terms "console", "command", "prompt", "anaconda", or the difference between python and "ipython" seems rather confusing, don't worry, the first Info lectures will help you.
   2. Second test
     * click on the `Windows` icon (or just press the `Windows` key on your keyboard), then on `All the programs` and then the `Anaconda2 64bits` folder, then on  `Anaconda Prompt`
     * at the prompt, type the following text, with the correct user name then press on `Enter`
@@ -356,41 +357,41 @@ __________________________________________________
     * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
     * click on `All the programs` and then the `Anaconda folder`, then on `Anaconda Command Prompt`
   2. execute the following command (type the text, then press on the `Enter` key):
-    ```
-    pip install expyriment
-    ```
+  ```
+  pip install expyriment
+  ```
 6. Testing expyriment
   1. Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda2 64 bits` folder, then on `Ipython`).  
   You should see the `In [1]: ` and the blinking cursor after which you can start typing.
   2. In the console, type or copy paste the following lines one by one
-   ```
-   import expyriment
-   ```
-   ```
-   exp = expyriment.design.Experiment(name="test")
-   ```
-   ```
-   expyriment.control.initialize(exp)
-   ```
-   3. You should now see this message:
-   ```
-   Python is running in an interactive shell but Expyriment wants to initialize a fullscreen  
-   Do you want to switch to windows mode? (Y/n)
-   ```
-   4. Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
-   5. Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
-   6. Select the python window and execute the following command:
-    ```
-    expyriment.control.start()
-    ```
-   7. Then you should select the expyriment window and hit `Enter` to validate the subject number.  
-   The windows should now diplay "Ready". Hit `Enter` a second time to validate.
-   8. Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command:
-   ```
-   expyriment.control.end()
-   ```
-   If this doesn't close the expyriment window, hit the `Enter` key once more.  
-   Now you can exit the python command line using `Ctrl+d` and `Enter`.
+  ```
+  import expyriment
+  ```
+  ```
+  exp = expyriment.design.Experiment(name="test")
+  ```
+  ```
+  expyriment.control.initialize(exp)
+  ```
+  3. You should now see this message:
+  ```
+  Python is running in an interactive shell but Expyriment wants to initialize a fullscreen  
+  Do you want to switch to windows mode? (Y/n)
+  ```
+  4. Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
+  5. Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
+  6. Select the python window and execute the following command:
+  ```
+  expyriment.control.start()
+  ```
+  7. Then you should select the expyriment window and hit `Enter` to validate the subject number.  
+  The windows should now diplay "Ready". Hit `Enter` a second time to validate.
+  8. Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command:
+  ```
+  expyriment.control.end()
+  ```
+  If this doesn't close the expyriment window, hit the `Enter` key once more.  
+  Now you can exit the python command line using `Ctrl+d` and `Enter`.
 
 __________________________________________________
 
