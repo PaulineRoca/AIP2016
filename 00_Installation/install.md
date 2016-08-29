@@ -126,6 +126,9 @@ __________________________________________________
 ### XQuartz
 * Download `XQuartz-2.7.9.dmg` by clicking on [this link](https://dl.bintray.com/xquartz/downloads/XQuartz-2.7.9.dmg) or from [https://www.xquartz.org/]
 
+### Python documentation
+* Download the archive of the official python documentation `python-2.7.12-docs-html.zip` with [this link](https://docs.python.org/2.7/archives/python-2.7.12-docs-html.zip) from https://docs.python.org/2.7/download.html, where you can also download a pdf version if you prefer.
+
 ### Python
  * Download the Python 2.7 Graphical Installer for Mac OS X from the Anaconda distribution with [this link](https://repo.continuum.io/archive/Anaconda2-4.1.1-MacOSX-x86_64.pkg), or from http://continuum.io/downloads but then beware of selecting the correct version
 
