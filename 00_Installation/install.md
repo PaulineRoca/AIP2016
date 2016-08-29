@@ -346,7 +346,7 @@ __________________________________________________
     * click on the `Windows` icon (or just press the `Windows` key on your keyboard), then on `All the programs` and then the `Anaconda2 64bits` folder, then on  `Anaconda Prompt`
     * at the prompt, type the following text, with the correct user name then press on `Enter`
      ```
-     python C:Users\your_account_name\AppData\Local\Continuum\Anaconda2\Lib\site-packages\pygame\examples\chimp.py
+     python C:Users\user_name\AppData\Local\Continuum\Anaconda2\Lib\site-packages\pygame\examples\chimp.py
      ```
      You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
 5. Installing expyriment
