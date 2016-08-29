@@ -239,7 +239,6 @@ __________________________________________________
  * Open an internet browser and go to http://github.com
  * fill the requested fields with appropriate username, email, and password
  * click on the `Sign up for Github` button
-
 1. Installations
  * If you are usign a 64 bits version of Windows
 
