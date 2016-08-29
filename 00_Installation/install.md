@@ -289,20 +289,17 @@ __________________________________________________
 ### Python
 
 1. Installation of the Anaconda distribution
-
  * go to your download folder and double click on the Anaconda2 file installer icon to initiate the installation process
  * on the Anaconda Setup Wizard, beware, pay attention to the following options option:
  * verify that you Install for `Just Me (recommended)`, then click on `Next`
  * use default Destination folder and click on `Next`
  * check that both "Add Anaconda to my PATH" and "Register Anaconda as my default Python 2.7" are ckecked and click on `Install`
  * upon completion, click on 'Next', then `Finish`
-
- 2. Test
+2. Test
  * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
  * click on `All the programs` and then the `Anaconda (64-bit)` folder, what you are looking for is the `IPython (Py 2.7)` entry. Click there (and not the `IPython (Py 2.7) Notebook` nor the `IPython (Py 2.7) QTConsole`).
  * this launches a window that understands only commands in the python language
  * in just after the `$` sign, type each of those lines one by one followed by a stroke on the `Enter` key
-
      ```
      import numpy as np
      import matplotlib.pyplot as plt
@@ -314,9 +311,7 @@ __________________________________________________
      ```
  * close the window with the graph
  * close the ipython shell by typing `quit()` or the keyboard shortcut `ctrl + D`
-
 3. Installing pygame
-
  * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
  * click on `All the programs` and then the `Anaconda2 64bits` folder, then on `Anaconda Prompt`
  * this launches the anaconda terminal, where you have to type this text and then press on the `Enter` key (this is called "executing a command", more on that in the first Info lectures!):
@@ -330,88 +325,71 @@ __________________________________________________
     ```
     conda install -c cogsci pygame=1.9.2a0
     ```
-
  * When the installation of pygame is over, you can even type `exit` and press on `Enter` to close the window, how convenient!
-
 4. Testing pygame
- 1. First test
-  * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command fo find the application  using its name.
-  * click on `All the programs` and then the `Anaconda2 64 bits` folder, then on `Ipython`
-  * after the "IPython window" has opened, you can copy and paste the following seven lines just after the `In [1]:`, then press twice on `Enter`
-
-    ```
-    import pygame
-    pygame.init()
-    w=pygame.display.set_mode([300,300])
-    w.fill([128,37,213])
-    pygame.display.flip()
-    pygame.time.wait(3000)
-    pygame.quit()
-    ```
-
+  1. First test
+    * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command fo find the application  using its name.
+    * click on `All the programs` and then the `Anaconda2 64 bits` folder, then on `Ipython`
+    * after the "IPython window" has opened, you can copy and paste the following seven lines just after the `In [1]:`, then press twice on `Enter`
+     ```
+     import pygame
+     pygame.init()
+     w=pygame.display.set_mode([300,300])
+     w.fill([128,37,213])
+     pygame.display.flip()
+     pygame.time.wait(3000)
+     pygame.quit()
+     ```
     You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
-  * press the keys `ctrl+D` and confirm your will to exit in order to quit the ipython console
-
- 2. Second test
-  * click on the `Windows` icon (or just press the `Windows` key on your keyboard), then on `All the programs` and then the `Anaconda2 64bits` folder, then on  `Anaconda Prompt`
-  * at the prompt, type the following text, with the correct user name then press on `Enter`
-      ```
-      python C:Users\your_account_name\AppData\Local\Continuum\Anaconda2\Lib\site-packages\pygame\examples\chimp.py
-      ```
-
-      You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
-
+    * press the keys `ctrl+D` and confirm your will to exit in order to quit the ipython console
+  2. Second test
+    * click on the `Windows` icon (or just press the `Windows` key on your keyboard), then on `All the programs` and then the `Anaconda2 64bits` folder, then on  `Anaconda Prompt`
+    * at the prompt, type the following text, with the correct user name then press on `Enter`
+     ```
+     python C:Users\your_account_name\AppData\Local\Continuum\Anaconda2\Lib\site-packages\pygame\examples\chimp.py
+     ```
+     You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
 5. Installing expyriment
- 1. Launch the anaconda terminal
-  * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
-  * click on `All the programs` and then the `Anaconda folder`, then on `Anaconda Command Prompt`
- 2. execute the following command (type the text, then press on the `Enter` key):
+  1. Launch the anaconda terminal
+    * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
+    * click on `All the programs` and then the `Anaconda folder`, then on `Anaconda Command Prompt`
+  2. execute the following command (type the text, then press on the `Enter` key):
     ```
     pip install expyriment
     ```
-
 6. Testing expyriment
- 1. Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda2 64 bits` folder, then on `Ipython`).  
- You should see the `>>>` and the blinking cursor after which you can start typing.
- 2. In the console, type or copy paste the following lines one by one
+  1. Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda2 64 bits` folder, then on `Ipython`).  
+  You should see the `>>>` and the blinking cursor after which you can start typing.
+  2. In the console, type or copy paste the following lines one by one
+   ```
+   import expyriment
+   ```
+   ```
+   exp = expyriment.design.Experiment(name="test")
+   ```
+   ```
+   expyriment.control.initialize(exp)
+   ```
+   3. You should now see this message:
+   ```
+   Python is running in an interactive shell but Expyriment wants to initialize a fullscreen  
+   Do you want to switch to windows mode? (Y/n)
+   ```
+   4. Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
+   5. Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
+   6. Select the python window and execute the following command:
+    ```
+    expyriment.control.start()
+    ```
+   7. Then you should select the expyriment window and hit `Enter` to validate the subject number.  
+   The windows should now diplay "Ready". Hit `Enter` a second time to validate.
+   8. Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command:
+   ```
+   expyriment.control.end()
+   ```
+   If this doesn't close the expyriment window, hit the `Enter` key once more.  
+   Now you can exit the python command line using `Ctrl+d` and `Enter`.
 
-```
-import expyriment
-```
-
-```
-exp = expyriment.design.Experiment(name="test")
-```
-
-```
-expyriment.control.initialize(exp)
-```
-
-Then you should see this message:  
-> Python is running in an interactive shell but Expyriment wants to initialize a fullscreen
-> Do you want to switch to windows mode? (Y/n)
-
-Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
-
-Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
-
-Select the python window and execute the following command:
-
-```
-expyriment.control.start()
-```
-
-Then you should select the expyriment window and hit `Enter` to validate the subject number.  
-The windows should now diplay "Ready". Hit `Enter` a second time to validate.
-
-Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command:
-
-```
-expyriment.control.end()
-```
-
-If this doesn't close the expyriment window, hit the `Enter` key once more.  
-Now you can exit the python command line using `Ctrl+d` and `Enter`.
 __________________________________________________
 
 
