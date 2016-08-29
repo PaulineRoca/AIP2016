@@ -682,9 +682,9 @@ unzip -d path_to_a_directory python-2.7.12-docs-html.zip
 
 1. Install python 2.7
  * Open a terminal (Ctrl-Alt-T) and type:
-```
-bash ~/Downloads/Anaconda*.sh
-```
+    ```
+    bash ~/Downloads/Anaconda*.sh
+    ```
 
  * **Note**: if you the installer is in a different folder than `Downloads`,
 change to the correct path
