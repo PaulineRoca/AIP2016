@@ -599,9 +599,9 @@ Otherwise, stay up for some more fun with the terminal!
   1. install expyriment from the terminal
      * launch a terminal if it's not done already
      * execute the following command (type the text, then press on the `Enter` key):
-     ```
-     pip install expyriment
-     ```
+       ```
+       pip install expyriment
+       ```
 
   2. restart your session  
      * close the terminal by executing
