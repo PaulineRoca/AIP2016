@@ -707,14 +707,13 @@ shortcut `ctrl + D`
 
  * then you are back to the terminal shell where you can install pygame
 
-
 3. Install Pygame
  * In a terminal, type
     ```
     conda install -c cogsci pygame=1.9.2a0
     ```
 
-2. Check the pygame installation
+4. Check the pygame installation
  * in a terminal, type `ipython` in order to lauch a ipython interpreter
  * in the ipython shell, type each of those lines one by one
 followed by enter
@@ -722,61 +721,59 @@ followed by enter
  1. First test
   * in a terminal, type `ipython` in order to lauch a ipython interpreter
   * then you can copy and paste the following seven lines just after the ipython prompt (`In [1]:`), then press twice on `Enter`
+     ```
+     import pygame
+     pygame.init()
+     w=pygame.display.set_mode([300,300])
+     w.fill([128,37,213])
+     pygame.display.flip()
+     pygame.time.wait(3000)
+     pygame.quit()
+     ```
 
-    ```
-    import pygame
-    pygame.init()
-    w=pygame.display.set_mode([300,300])
-    w.fill([128,37,213])
-    pygame.display.flip()
-    pygame.time.wait(3000)
-    pygame.quit()
-    ```
-
-    You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
+  * You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
   * press the keys `ctrl+D` and confirm your will to exit in order to quit the ipython console
 
  2. Second test
   * open a terminal and look for the chimpy.py file in the anaconda hierarchy
-  ```
-  find ~/anaconda*/lib -name "chimp.py"
-  ```
+     ```
+     find ~/anaconda*/lib -name "chimp.py"
+     ```
+
   * in a terminal, type `ipython` in order to lauch a ipython interpreter
   * at the prompt, type the following command, replacing path_to_chimp.py by the path you found with the `find` command, then press on `Enter`
-      ```
-      python path_to_chimp.py
-      ```
+     ```
+     python path_to_chimp.py
+     ```
 
-      or
+     or
 
-      ```
-      python $(find ~/anaconda*/lib -name "chimp.py")
-      ```
+     ```
+     python $(find ~/anaconda*/lib -name "chimp.py")
+     ```
 
-      You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
-
+  * You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
 
 3. Install expyriment
  * in a terminal, type
-  ```
-  pip install expyriment
-  ```
+    ```
+    pip install expyriment
+    ```
 
 4. Test expyriment
-1. Launch the ipython console as you did before
-2. In the console, type or copy paste the following lines one by one
+  1. Launch the ipython console as you did before
+  2. In the console, type or copy paste the following lines one by one
+     ```
+     import expyriment
+     ```
 
-```
-import expyriment
-```
-
-```
-exp = expyriment.design.Experiment(name="test")
-```
-
-```
-expyriment.control.initialize(exp)
-```
+     ```
+     exp = expyriment.design.Experiment(name="test")
+     ```
+     
+     ```
+     expyriment.control.initialize(exp)
+     ```
 
 Then you should see this message:  
 > Python is running in an interactive shell but Expyriment wants to initialize a fullscreen
