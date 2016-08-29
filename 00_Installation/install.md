@@ -691,10 +691,8 @@ change to the correct path
 
 2. Check the python installation
  * in a terminal, type `ipython` in order to lauch a ipython interpreter
- * in the ipython shell, type each of those lines one by one
-followed by enter
-
-```
+ * in the ipython shell, type each of those lines one by one followed by enter
+    ```
     import numpy as np
     import matplotlib.pyplot as plt
     from scipy import stats
@@ -702,7 +700,7 @@ followed by enter
     y=stats.norm.pdf(x)
     plt.plot(x,y)
     plt.show()
-```
+    ```
 
  * exit the ipython shell by typing `quit()` or the keyboard
 shortcut `ctrl + D`
@@ -712,9 +710,9 @@ shortcut `ctrl + D`
 
 3. Install Pygame
  * In a terminal, type
-```
+    ```
     conda install -c cogsci pygame=1.9.2a0
-```
+    ```
 
 2. Check the pygame installation
  * in a terminal, type `ipython` in order to lauch a ipython interpreter
