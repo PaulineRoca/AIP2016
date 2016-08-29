@@ -241,6 +241,7 @@ __________________________________________________
  * click on the `Sign up for Github` button
 1. Installations
  * If you are usign a 64 bits version of Windows
+ 
   1. Installation
    * go to the directory where you donloaded the installer `GitHubSetup.exe`
    * then double-click  on the file installer icon to start the install process. It will download some more files, be patient.
