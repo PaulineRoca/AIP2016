@@ -840,7 +840,8 @@ shortcut `ctrl + D`
 ### R
 
 The instructions to install R are available here:
-<https://cran.r-project.org/bin/linux/ubuntu/README.html#installation>
+https://cran.r-project.org/bin/linux/ubuntu/README.html#installation
+
 1. Setup
   * Check which linux exactly you are using with the following command
      ```
