@@ -887,14 +887,20 @@ vivid/ >> /etc/apt/sources.list'
 ```
 
 
- * update your repository list, then execute the apt install commands
+ * update your repository list by executing
 
 ```
 sudo apt-get update
+```
+
+2. Install R
+* In a terminal, run the apt install command
+```
 sudo apt-get install r-base r-base-core r-base-html
 ```
 
 ### Rstudio
+1. Installation
  * in a terminal, execute the following command, replacing the XX by the version numbers
 
 ```
@@ -902,6 +908,6 @@ sudo apt-get install r-base r-base-core r-base-html
     sudo dpkg -i rstudio-X.XX.XXX-amd64.deb
 ```
 
-3. Verification
+2. Verification
  * type `rstudio` in a console to lauch the R interpreter
  * type 'demo(graphics)' and press on 'Enter' to see the graphs.
