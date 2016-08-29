@@ -234,42 +234,36 @@ __________________________________________________
 
 
 ### Git
-
 0. Set up an account on Github.com
- * Open an internet browser and go to http://github.com
- * fill the requested fields with appropriate username, email, and password
- * click on the `Sign up for Github` button
+  * Open an internet browser and go to http://github.com
+  * fill the requested fields with appropriate username, email, and password
+  * click on the `Sign up for Github` button
 1. Installations
- * If you are usign a 64 bits version of Windows
- 
-  1. Installation
-   * go to the directory where you donloaded the installer `GitHubSetup.exe`
-   * then double-click  on the file installer icon to start the install process. It will download some more files, be patient.
-  2. Configuration: when it's done, you should see a window that says "Welcome"
-   * fill the username and password and click on `login`, then your email and click on `Continue`
-   * skip the local repository search
-   * now you can just quit the "Github Desktop" application
-
- * If you are using a 32 bits version of Windows
-
-  1. Installation
-    * go to the directory where you donloaded the installer `Git-2.9.2-32-bit.exe`
-    * then double-click  on the file installer icon.
-    * check the `Additional icons > On the Desktop` option to get an easy access to the program
-    * when asked about further options, use the default choice
-  2. Configuration
-    * go to your desktop and  open the `Git Bash` terminal window with a double-click on the icon
-    * configure your identity, by typing in the `Git Bash` terminal window the following line with the user name of your GitHub account,then hitting the `Enter` key
-
-    ```
-    git config --global user.name "your_user_name"
-    ```
-
-    * configure your email, by typing in the `Git Bash` terminal window the following line with the email associated with your GitHubaccount, then hitting the `Enter` key
-
-    ```
-    git config --global user.email your_email@example.com
-    ```
+  + If you are usign a 64 bits version of Windows
+    1. Installation
+      * go to the directory where you donloaded the installer `GitHubSetup.exe`
+      * then double-click  on the file installer icon to start the install process. It will download some    mofiles, be patient.
+      * when it's done, you should see a window that says "Welcome"
+    2. Configuration:
+      * fill the username and password and click on `login`, then your email and click on `Continue`
+      * skip the local repository search
+      * now you can just quit the "Github Desktop" application
+  + If you are using a 32 bits version of Windows
+    1. Installation
+      * go to the directory where you donloaded the installer `Git-2.9.2-32-bit.exe`
+      * then double-click  on the file installer icon.
+      * check the `Additional icons > On the Desktop` option to get an easy access to the program
+      * when asked about further options, use the default choice
+    2. Configuration
+      * go to your desktop and  open the `Git Bash` terminal window with a double-click on the icon
+      * configure your identity, by typing in the `Git Bash` terminal window the following line with the user name of your GitHub account,then hitting the `Enter` key
+      ```
+      git config --global user.name "your_user_name"
+      ```
+      * configure your email, by typing in the `Git Bash` terminal window the following line with the email associated with your GitHubaccount, then hitting the `Enter` key
+      ```
+      git config --global user.email your_email@example.com
+      ```
 
     * you can close the `Git Bash` window now.
 
