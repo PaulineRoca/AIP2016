@@ -359,7 +359,7 @@ __________________________________________________
     ```
 6. Testing expyriment
   1. Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda2 64 bits` folder, then on `Ipython`).  
-  You should see the `>>>` and the blinking cursor after which you can start typing.
+  You should see the `In [1]: ` and the blinking cursor after which you can start typing.
   2. In the console, type or copy paste the following lines one by one
    ```
    import expyriment
