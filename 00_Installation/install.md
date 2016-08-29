@@ -318,8 +318,8 @@ __________________________________________________
  ```
  conda install conda
  ```
- You have to type it where a little rectangle is blinking (this is the "prompt"), after something that looks like `C:Users\your_account_name\AppData\Local\Continuum\Anaconda2>`
- You will see some text messages during the installation of some python modules, don't worry!
+  You have to type it where a little rectangle is blinking (this is the "prompt"), after something that looks like `C:Users\your_account_name\AppData\Local\Continuum\Anaconda2>`
+  You will see some text messages during the installation of some python modules, don't worry!
  * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default)
  * when you are back to the blinking little rectangle, type this text, then press the `Enter` key:
  ```
