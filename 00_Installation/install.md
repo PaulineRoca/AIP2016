@@ -602,7 +602,7 @@ Otherwise, stay up for some more fun with the terminal!
         ```
         pip install expyriment
         ```
-        
+  
   2. restart your session  
      * close the terminal by executing
      ```
