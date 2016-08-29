@@ -477,9 +477,9 @@ then, hit the `Enter` key.
 
 ### Python documentation
 
- * use a double-click on the archive '' then select the `Extract all` option
- * select the directory in which you would like to put the documentation
- * then click on the `Extract` button on the bottom right of the next window.
+ * use a double-click on the archive `python-2.7.12-docs-html.zip`, this automatically extract the archive content in a folder
+ * use your finder to select (and create if needed) the directory in which you would like to put the documentation
+ * drag and drop the created folder in this new directoru
 
 
 ### Python
