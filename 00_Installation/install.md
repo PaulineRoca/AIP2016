@@ -538,6 +538,7 @@ Otherwise, stay up for some more fun with the terminal!
      ```
      brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
      ```
+     
  * wait
 
 9. Install "conda"
