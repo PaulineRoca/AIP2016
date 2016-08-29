@@ -235,11 +235,12 @@ __________________________________________________
 
 ### Git
 
- 0. Set up an account on Github.com
-  * Open an internet browser and go to http://github.com
-  * fill the requested fields with appropriate username, email, and password
-  * click on the `Sign up for Github` button
+0. Set up an account on Github.com
+ * Open an internet browser and go to http://github.com
+ * fill the requested fields with appropriate username, email, and password
+ * click on the `Sign up for Github` button
 
+1. Installations
  * If you are usign a 64 bits version of Windows
   1. Installation
     * go to the directory where you donloaded the installer `GitHubSetup.exe`
@@ -263,7 +264,8 @@ __________________________________________________
     ```
     git config --global user.name "your_user_name"
     ```
- * configure your email, by typing in the `Git Bash` terminal window the following line with the email associated with your GitHubaccount, then hitting the `Enter` key
+
+    * configure your email, by typing in the `Git Bash` terminal window the following line with the email associated with your GitHubaccount, then hitting the `Enter` key
 
     ```
     git config --global user.email your_email@example.com
