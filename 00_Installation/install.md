@@ -245,10 +245,8 @@ __________________________________________________
  * If you are usign a 64 bits version of Windows
 
   1. Installation
-
    * go to the directory where you donloaded the installer `GitHubSetup.exe`
    * then double-click  on the file installer icon to start the install process. It will download some more files, be patient.
-
   2. Configuration: when it's done, you should see a window that says "Welcome"
 
    * fill the username and password and click on `login`, then your email and click on `Continue`
