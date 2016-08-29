@@ -795,7 +795,7 @@ shortcut `ctrl + D`
 
   4. Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type"ye  then hit `Enter`).
 
-  5. Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message  displayed
+  5. Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message  is displayed
   6. Select the python window and execute the following command:
      ```
      expyriment.control.start()
