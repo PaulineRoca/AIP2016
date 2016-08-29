@@ -16,8 +16,9 @@ Tuesday August 30 from 9:00 to 12:00. We will **not** answer installation
 questions during the following Info 1 or Info 2 lectures. We will be reluctant to to help you if you were not attending on Tuesday morning.  
 
 This evening, you have at least 2 important things to do:
-1. backup your computer before the installations
-2. free at least 5 GB on your hard drive
+
+ 1. backup your computer before the installations
+ 2. free at least 5 GB on your hard drive
 
 Some installations will require an internet access, login and password for the ENS wifi will be provided on Monday, don't forget to bring them on Tuesday morning.
 
