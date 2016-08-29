@@ -560,7 +560,7 @@ Otherwise, stay up for some more fun with the terminal!
  * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default
  * wait
 
-11. Check the installation
+11. Check the pygame installation
  * in a terminal, type
      ```
      ipython
@@ -613,43 +613,46 @@ Otherwise, stay up for some more fun with the terminal!
      * close your session using the `apple menu` (clic on the apple icon on the top left of your screen), then `Log Out your_user_name`, or using the `Shift Cmd Q` keyboard shortcut
 
 13. Testing expyriment
-     0. log in your session
-     1. open a Terminal
-     2. Launch the ipython console by executing the command
+  0. log in your session
+  1. open a Terminal
+  2. Launch the ipython console by executing the command
      ```
      ipython
      ```
-     3. In this ipython console, once you see the `In [1]: ` and the blinking cursor, type or copy paste the following lines one by one
+  3. In this ipython console, once you see the `In [1]: ` and the blinking cursor, type or copy paste the following lines one by one
+     ```
+     import expyriment
+     ```
 
-    ```
-    import expyriment
-    ```
+     ```
+     exp = expyriment.design.Experiment(name="test")
+     ```
 
-    ```
-    exp = expyriment.design.Experiment(name="test")
-    ```
+     ```
+     expyriment.control.initialize(exp)
+     ```
 
-    ```
-    expyriment.control.initialize(exp)
-    ```
+     Then you should see this message:  
+     > Python is running in an interactive shell but Expyriment wants to initialize a fullscreen
+     > Do you want to switch to windows mode? (Y/n)
 
-    Then you should see this message:  
-    > Python is running in an interactive shell but Expyriment wants to initialize a fullscreen
-    > Do you want to switch to windows mode? (Y/n)
+  4. Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
 
-    Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
+  5. Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
+  6. Select the python window and execute the following command:
+     ```
+     expyriment.control.start()
+     ```
 
-    Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Ready" message is dosplayed
+  7. Then you should select the expyriment window and hit `Enter` to validate the subject number.  
+     The windows should now diplay "Ready". Hit `Enter` a second time to validate.
+  8. Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command to finish the experiment and close the window:
+     ```
+     expyriment.control.end()
+     ```
 
-    ```
-    expyriment.control.start()
-    ```
+     If this doesn't work, turn your computer on and of again, then retest expyriment.
 
-    ```
-    expyriment.control.end()
-    ```
-
-    If this doesn't work, turn your computer on and of again, then retest expyriment.
 
 __________________________________________________
 
@@ -713,14 +716,15 @@ shortcut `ctrl + D`
     conda install -c cogsci pygame=1.9.2a0
     ```
 
-4. Check the pygame installation
- * in a terminal, type `ipython` in order to lauch a ipython interpreter
- * in the ipython shell, type each of those lines one by one
-followed by enter
 
- 1. First test
-  * in a terminal, type `ipython` in order to lauch a ipython interpreter
-  * then you can copy and paste the following seven lines just after the ipython prompt (`In [1]:`), then press twice on `Enter`
+11. Check the pygame installation
+ * in a terminal, type
+     ```
+     ipython
+     ```
+
+ * you should now see the ipython prompt `In [1]:`
+ * you can copy and paste the following seven lines then press twice on `Enter`
      ```
      import pygame
      pygame.init()
@@ -730,68 +734,76 @@ followed by enter
      pygame.time.wait(3000)
      pygame.quit()
      ```
+ * press the keys `ctrl+D` to quit the ipython console
+ * to further check the installation, in a this terminal window, first, get the path for the `chimp.py` file:
+ ```
+ find ~/anaconda*/lib -name "chimp.py"
+ ```
 
-  * You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
-  * press the keys `ctrl+D` and confirm your will to exit in order to quit the ipython console
-
- 2. Second test
-  * open a terminal and look for the chimpy.py file in the anaconda hierarchy
-     ```
-     find ~/anaconda*/lib -name "chimp.py"
-     ```
-
-  * in a terminal, type `ipython` in order to lauch a ipython interpreter
-  * at the prompt, type the following command, replacing path_to_chimp.py by the path you found with the `find` command, then press on `Enter`
-     ```
-     python path_to_chimp.py
-     ```
-
-     or
-
-     ```
-     python $(find ~/anaconda*/lib -name "chimp.py")
-     ```
-
-  * You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
-
-3. Install expyriment
- * in a terminal, type
+ * then still in the terminal, execute the following command, using the path you've just got
     ```
-    pip install expyriment
+    python path_to_chimp.py
     ```
 
-4. Test expyriment
-  1. Launch the ipython console as you did before
-  2. In the console, type or copy paste the following lines one by one
+ * if you have trouble with the previous command execute the following command
+    ```
+    python $(find ~/anaconda* -name "chimp.py")
+    ```
+
+ * You should be able to play a silly game, including sound (make sure the sound is on, but not too loud).
+
+12. Installing expyriment
+  1. install expyriment from the terminal
+     * launch a terminal if it's not done already
+     * execute the following command (type the text, then press on the `Enter` key):
      ```
-     import expyriment
+     pip install expyriment
      ```
 
+  2. restart your session  
+     * close the terminal by executing
      ```
-     exp = expyriment.design.Experiment(name="test")
+     exit
      ```
-     
+     * quit the terminal then lauch it again, if needed, log out and log back in
+
+13. Testing expyriment
+     1. open a Terminal
+     2. Launch the ipython console by executing the command
      ```
-     expyriment.control.initialize(exp)
+     ipython
      ```
+     3. In this ipython console, once you see the `In [1]: ` and the blinking cursor, type or copy paste the following lines one by one
 
-Then you should see this message:  
-> Python is running in an interactive shell but Expyriment wants to initialize a fullscreen
-> Do you want to switch to windows mode? (Y/n)
+    ```
+    import expyriment
+    ```
 
-Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
+    ```
+    exp = expyriment.design.Experiment(name="test")
+    ```
 
-Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Ready" message is dosplayed
+    ```
+    expyriment.control.initialize(exp)
+    ```
 
-```
-expyriment.control.start()
-```
+    Then you should see this message:  
+    > Python is running in an interactive shell but Expyriment wants to initialize a fullscreen
+    > Do you want to switch to windows mode? (Y/n)
 
-```
-expyriment.control.end()
-```
+    Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes"then hit `Enter`).
 
-You can now exit the ipython console
+    Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Ready" message is dosplayed
+
+    ```
+    expyriment.control.start()
+    ```
+
+    ```
+    expyriment.control.end()
+    ```
+
+    You can now exit the ipython console
 
 
 ### Git
