@@ -65,7 +65,7 @@ Select the installation instructions for your operating system:
 [Installations for Windows](#installations-for-windows)  
 [Installations for Mac OS](#installations-for-mac-os)  
 [Installations for Debian based Linux](#installations-for-debian-based-linux)  
-Once the installation on your computer completed, you can browse the documents in [the ressource folder](../resources/)
+Once the installation on your computer completed, you can get some reading material from the teachers (you will be able to get if on the following courses if you succesfully installed everything at home and thus don't need to come tomorrow morning)
 
 __________________________________________________
 
