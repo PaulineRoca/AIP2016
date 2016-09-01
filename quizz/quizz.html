@@ -1,0 +1,50 @@
+<p>Info1 is for complete beginners with no experience of coding at all.</p>
+<p>Info2 is for students who already have very basic or intermediate knowledge of coding (professional programmers need not apply).</p>
+<p>It you answer 'yes' to most of the following questions, you can attend info2.</p>
+<ol style="list-style-type: example">
+<li><p>Do you have basic computer skills? (i.e. do you understand the tree structure of folders? Can you install a software on your computer?)</p></li>
+<li><p>Do you remember having seen the notion of algorithm in maths courses in high-school (for example to compute the Greatest Common Denominator of two numbers)?</p></li>
+<li><p>Have you ever entered programs in pocket calculators, on on a computer?</p></li>
+<li><p>Do you know what is a 'for' loop in a program?</p></li>
+<li><p>Can you guess what the following Python programs do?</p></li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">if</span> <span class="dv">2</span> + <span class="dv">2</span> == <span class="dv">5</span>: 
+    <span class="dt">print</span>(<span class="st">&quot;Sorry!&quot;</span>)
+<span class="kw">else</span>:
+    <span class="dt">print</span>(<span class="st">&quot;Bonjour!&quot;</span>)</code></pre>
+<ol start="6" style="list-style-type: example">
+<li>Can you guess what the following program does?</li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python">name = <span class="dt">input</span>(<span class="st">&quot;What is your name? &quot;</span>)
+<span class="dt">print</span>(<span class="st">&quot;Hello &quot;</span> + name + <span class="st">&quot;!&quot;</span>)</code></pre>
+<ol start="7" style="list-style-type: example">
+<li>Can you guess what the following program does?</li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="dt">sum</span> = <span class="dv">0</span>
+<span class="kw">for</span> i in (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>):
+    <span class="dt">sum</span> = <span class="dt">sum</span> + i
+<span class="dt">print</span>(<span class="dt">sum</span>)</code></pre>
+<ol start="8" style="list-style-type: example">
+<li>What does the following program do?</li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python">n = <span class="dv">50</span>
+guess = <span class="dt">input</span>(<span class="st">&#39;Your guess?&#39;</span>)
+
+<span class="kw">while</span> guess != n:
+    <span class="kw">if</span> guess &gt; n:
+        <span class="dt">print</span>(<span class="st">&#39;Too large!&#39;</span>)
+    <span class="kw">if</span> guess &lt; n:
+        <span class="dt">print</span>(<span class="st">&#39;Too Small!&#39;</span>)
+    guess = <span class="dt">input</span>(<span class="st">&#39;New guess?&#39;</span>)
+
+<span class="dt">print</span>(<span class="st">&quot;Correct!&quot;</span>)</code></pre>
+<ol start="9" style="list-style-type: example">
+<li>What does the following program do?</li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> prod(x):
+    p = <span class="dv">1</span>
+    <span class="kw">for</span> e in x:
+        p = p * e
+    <span class="kw">return</span> p
+    
+prod([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</code></pre>

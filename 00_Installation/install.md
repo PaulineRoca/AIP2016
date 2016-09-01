@@ -781,6 +781,17 @@ shortcut `ctrl + D`
      import expyriment
      ```
 
+If you see the following error message 
+
+    ImportError: libSDL_mixer-1.2.so.0: cannot open shared object file: No such file or directory
+
+
+Then type the following command in a terminal: 
+
+    sudo apt-get install libsdl-mixer1.2
+
+And start again.
+
      ```
      exp = expyriment.design.Experiment(name="test")
      ```

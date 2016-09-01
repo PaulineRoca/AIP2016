@@ -1,5 +1,5 @@
 # recursive make: runs make in all the immediate subdirs
-# Time-stamp: <2016-08-26 10:18:23 cp983411>
+# Time-stamp: <2016-09-01 17:27:33 cp983411>
  
 SHELL=/bin/bash
 
@@ -33,5 +33,5 @@ doclist.md:
 	done >> $@
 
 putonweb:
-	rsync -avz --delete --exclude .git ./ pallier@ftp.pallier.org:www/ressources/AIP2016
+	rsync -avz --delete --exclude .git --filter='P books/*' ./ pallier@ftp.pallier.org:www/ressources/AIP2016
 
