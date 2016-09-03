@@ -1,5 +1,5 @@
 # recursive make: runs make in all the immediate subdirs
-# Time-stamp: <2016-09-01 17:27:33 cp983411>
+# Time-stamp: <2016-09-01 22:28:11 cp983411>
  
 SHELL=/bin/bash
 
@@ -24,11 +24,11 @@ doclist.html: doclist.md
 
 doclist.md:
 	echo "<h1>>HTML files:</h1>" > $@
-	for f in `find -name '*.html' | sort `; do \
+	for f in `find . -name '*.html' | sort `; do \
 		echo "* <a href="$$f">$$f</a>"; \
 	done >> $@
 	echo "<h1>>PDFs:</h1>" >> $@
-	for f in `find -name '*.pdf' | sort `; do \
+	for f in `find . -name '*.pdf' | sort `; do \
 		echo "* <a href="$$f">$$f</a>"; \
 	done >> $@
 
