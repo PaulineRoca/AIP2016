@@ -1,17 +1,39 @@
 % Python in a nutshell
 % Christophe Pallier
-%
+%hton
 
-# Using Python interactively
+# Progamming in  Python
 
-You can use Python in two ways:
+You can program in Python in (at least) three different ways: interactively with `jupyter notebook` or with an `ipython` command line, or using an edit-run cycle approach with a program editor (e.g. `atom`, `idle`, `spyder`,...).
 
-* **Interactively**, e.g. by launching `ipython` in a terminal, and typing python commands that are *interpreted* and *executed* when you press 'Enter'. 
+In all cases, you need to be able to open a command line window (a.k.a. a **terminal**):
+  * Ubuntu-Linux: Ctrl-Alt-T (see https://help.ubuntu.com/community/UsingTheTerminal)
+  * MacOSX: Open Finder/Applications/Utilities/Terminal (see http://www.wikihow.com/Get-to-the-Command-Line-on-a-Mac)
+  * Windows: Win+X+Command-Prompt (see http://pcsupport.about.com/od/commandlinereference/f/open-command-prompt.htm)
 
-1. Open a command line window (a.k.a. Terminal):
-    - Ubuntu-Linux: Ctrl-Alt-T (see <https://help.ubuntu.com/community/UsingTheTerminal>)
-    - MacOSX: Open Finder/Applications/Utilities/Terminal (see <http://www.wikihow.com/Get-to-the-Command-Line-on-a-Mac>)
-    - Windows: Win+X+Command-Prompt (see <http://pcsupport.about.com/od/commandlinereference/f/open-command-prompt.htm>)
+
+## using jupyter notebook
+
+The first step is to type `jupyter notebook` in a terminal
+
+    mkdir -p AIP2016-files  # only if AIP2016-file does not yet exist
+    cd AIP2016-myfiles
+    jupyter notebook
+
+A browser will open woth a page like the one shown on the left panel of the figure below. Then, by cliking on `New` and selecting `Python [root]`, a new tab will show a page like the right panel, where you can enter python code in 'cells'. To execute the code in a cell, just move the cursor there and press `Ctrl+Enter`
+
+------------------------------ ------------------------------
+![](img/jupyter1.png) ![](img/jupyter2.png)
+------------------------------ ------------------------------
+
+A nice feature of the "n jupyter notebooks" is that they are saved automatically, in .ipynb files that can be shared with other people. This is very handy, for example, to send a data analysis report by email.
+
+Jupyter's documentation si available at http://jupyter.readthedocs.io/en/latest/index.html
+
+## using ipython
+
+You can launch `ipython` in a terminal, and start typing python commands that are *interpreted* and *executed* when you press 'Enter'.
+
 
 2. Type `ipython` on the command-line and press `Enter`:
 
@@ -23,11 +45,11 @@ You can use Python in two ways:
 3. When you terminal looks like the one of the right, you are  "talking" to ipython. Enter the following commands:
 
 ```python
-	import turtle 
+	import turtle
 	turtle.circle(50)
 	turtle;forward(100)
 	turtle.circle(50)
-	
+
 	turtle.right(90)
 	turtle.forward(100)
 	turtle.right(90)
@@ -36,11 +58,12 @@ You can use Python in two ways:
 
 . . .
 
-This way of using Python is fine if you need to quickly test an idea. But as soon as you quit `ipython` (by pressing `Ctrl-D`), you lose all traces of what you have done. To avoid that, you want to use the **Edit-run** approach
+This way of using Python is fine if you need to quickly test an idea. But as soon as you quit `ipython` (by pressing `Ctrl-D`), you lose all traces of what you have done. To avoid that, you want to use the **Edit-run* approach.
 
-# Using a editor (Edit-run cycle)
 
-Using a **text editor**, e.g. *atom*, you write a python script, that is, a series of commands, that you save in a file; then you gie this file to interpret to Python. Here is how:
+## Using a text editor (Edit-run cycle)
+
+Using a **text editor**, e.g. *atom*, you write a python script, that is, a series of commands, that you save in a file; then you give this file to interpret to a python interpreter. Here is how:
 
 1. Open a Text-Editor (e.g. Atom)  and a Terminal window side-by-side:
 
@@ -50,7 +73,6 @@ Using a **text editor**, e.g. *atom*, you write a python script, that is, a seri
 
 ```python
 	import turtle
-    turtle.circle(50)
 	turtle.forward(50)
 	turtle.left(120)
 	turtle.forward(100)
@@ -61,7 +83,7 @@ Using a **text editor**, e.g. *atom*, you write a python script, that is, a seri
 ```
 
 
-3. Using 'File/Save as',  save the this text under the filename `myscript.py` in your personal (home) directory 
+3. Using 'File/Save as',  save the this text under the filename `myscript.py` in your personal (home) directory
 * *run* with a python interpreter, by typing `python myscript.py` on a command line of the Terminal. Try it now.
 
 Important: you must make sure that the current working direcoty of the terminal is the same directory where the file myscript.py has been saved. Otherwise, you will get an error message such as 'No such file or directory'. To fix this problem, you must use the 'cd' command to navigate the directory structure.
@@ -72,7 +94,7 @@ Remarks:
 
 * You can learn more about Turtle graphics by reading the documentation at <https://docs.python.org/2/library/turtle.html>
 
-* there exist a third approach which combines interactivity and persistence --- the `ipython notebook`. Like Mathematica, handy for numerical processing. 
+* there exist a third approach which combines interactivity and persistence --- the `ipython notebook`. Like Mathematica, handy for numerical processing.
 
 # First programs
 
@@ -81,7 +103,7 @@ Remarks:
 
 Create a script `hello.py` in the editor, save it and run it on the command-line:
 
-	name = raw_input('What is your name?')
+	name = raw_input('What is your name?')  # input() if using Python3
 	print('Hello ' + name + '!')
 
 Concepts: string constant, variable (name), affectation, string concatenation with '+'
@@ -102,7 +124,7 @@ Concepts: multiple affectation, modifying a variable, while loop, indentation fo
 
 ## Types
 
-### 
+###
 
 Do the following in interactive mode (ipython):
 
@@ -154,7 +176,7 @@ Exercices: faire les exercices 2.3 et 2.4 de _How to think like a computer scien
     dico['windows']
     dico['macos']
     dico['linux']
-	
+
 ## for Loops
 
 	for x in [1, 2, 3, 4]:
@@ -188,7 +210,7 @@ Concepts: range to generate a list of numbers, 'for' loop, indentation of instuc
 
 Concepts: list of strings, double imbrication
 
-Exercice: write a program that computes the sum of the first n integers (1+2+...+n) 
+Exercice: write a program that computes the sum of the first n integers (1+2+...+n)
 
 . . .
 
@@ -201,10 +223,10 @@ Exercice: write a program that computes the sum of the first n integers (1+2+...
 
 # Guess a number
 
-Type this program in a text editor, save it as a Python script (with extension .py) and run it.
+Type the following code in a text editor, save it as a Python script (with extension .py) and run it.
 
 ```python
-    # guess a number 
+    # guess a number
 	import random
 
 	target = random.randint(1, 100)
@@ -334,7 +356,7 @@ def max(a, b):
 		return b
 ```
 
-	
+
 
 ## importation of modules
 
@@ -374,7 +396,7 @@ value of parameters to the local variables.
 
 
 ```python
-a = 3 
+a = 3
 b = a
 print a, b
 a = 4 # a points to a new object
@@ -382,11 +404,9 @@ print a, b
 ```
 
 ```python
-a = [1, 2, 3] 
+a = [1, 2, 3]
 b = a    # points to the same object (a list)
 c = a[:] # makes a copy
 a[0] = 10
 print a, b, c
 ```
-
-
