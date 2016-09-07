@@ -1,0 +1,27 @@
+
+
+Wed Sep  7 06:37:18 2016
+Command line: TestDisk
+
+TestDisk 6.14, Data Recovery Utility, July 2013
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.2.0-42-generic (#49~14.04.1-Ubuntu SMP Wed Jun 29 20:22:11 UTC 2016) x86_64
+Compiler: GCC 4.8
+Compilation date: 2013-10-29T01:29:29
+ext2fs lib: 1.42.9, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none
+User is not root!
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 1 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 256 GB / 238 GiB - CHS 31130 255 63, sector size=512 - SanDisk SD7SN6S-256G-1006, S/N:161520808423, FW:X3511006
+Disk /dev/mapper/crypt-root - 30 GB / 28 GiB - 59998208 sectors, sector size=512
+Disk /dev/mapper/crypt-swap - 4093 MB / 3904 MiB - 7995392 sectors, sector size=512
+Disk /dev/mapper/crypt-volatile - 219 GB / 204 GiB - 428113920 sectors, sector size=512
+Disk /dev/mapper/sda5_crypt - 254 GB / 236 GiB - 496111616 sectors, sector size=512
+Disk /dev/dm-0 - 254 GB / 236 GiB - 496111616 sectors, sector size=512
+Disk /dev/dm-1 - 30 GB / 28 GiB - 59998208 sectors, sector size=512
+Disk /dev/dm-2 - 4093 MB / 3904 MiB - 7995392 sectors, sector size=512
+Disk /dev/dm-3 - 219 GB / 204 GiB - 428113920 sectors, sector size=512
+
+Partition table type (auto): None
+SIGINT detected! TestDisk has been killed.
