@@ -1,77 +1,66 @@
-% Self-Quizz: should I attend Info1, Info2 (or both) ?
 % 
+% Info-2 / Lecture 3. 
 %
 
-Info1 is for complete beginners with no experience of coding at all.
 
-Info2 is for students who already have very basic or intermediate knowledge of coding (professional programmers need not apply). 
+# modules
 
-It you answer 'yes' to most of the following questions, you can attend info2. 
+Python's language can be augmented by new functions and object from modules. They are imported with the function `import`.
 
-(@) Do you have basic computer skills? (i.e. do you understand the tree structure of folders? Can you install a software on your computer?)
+Example 1 (in `ipython` command line):
 
-(@) Do you remember having seen the notion of algorithm in maths courses in high-school (for example to compute the Greatest Common Denominator of two numbers)?
+    import math 
+	math.sin(1.3)
 
-(@) Have you ever entered programs in pocket calculators, on on a computer?
+Example 2:
 
-(@) Do you know what is a 'for' loop in a program?
+	import numpy as np
+	import matplotlib.pyplot as plt
+	plt.plot(np.sin(np.linspace(0, 6*np.pi, 500)))
+	plt.show()
 
-(@) Can you guess what the following Python programs do?
+Example 3: 
 
-```python
-if 2 + 2 == 5: 
-	print("Sorry!")
-else:
-	print("Bonjour!")
-```
-
-(@) Can you guess what the following program does?
-
-```python
-name = input("What is your name? ")
-print("Hello " + name + "!")
-```
-
-(@) Can you guess what the following program does?
-
-```python
-sum = 0
-for i in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10):
-	sum = sum + i
-print(sum)
-```
-
-(@) What does the following program do?
-
-```python
-n = 50
-guess = input('Your guess?')
-
-while guess != n:
-	if guess > n:
-		print('Too large!')
-	if guess < n:
-		print('Too Small!')
-	guess = input('New guess?')
-
-print("Correct!")
-```
-
-
-(@) What does the following program do?
-
-```python
-def prod(x):
-	p = 1
-	for e in x:
-		p = p * e
-	return p
+	import random
+	random.<TAB>
+	random?
 	
-prod([4, 5, 6])
-```
+
+Note: It is easy to create one's own module: having a file `mymodule.py` in the current directory, it is possible to use `import mymodule`.
+
+Have a look at the `turtle` module https://docs.python.org/2/library/turtle.html
+
+EX: Write the following program in atom, save it and execute it
+
+	import turtle
+	turtle.forward(100)
+	turtle.left(120)
+	turtle.forward(100)
+	turtle.left(120)
+	turtle.forward(100)
+	turtle.left(120)
+	turtle.mainloop()
+	
+Modify this program to display a regular polygon with 'n' sides
 
 
+# A few useful functions on strings
 
+	a = "Bonjour Jean"
+	len(a)
+	a[2:4]
+	
+	a.replace("Jean", "Marc")
+	a
+	b = a.replace("Jean", "Marc")
+	
+	a = "caillou, genou, bijou"
+	a.split(",")
+	
+	b= ['alpha', 'beta', 'gamma']
+	";".join(b)
 
+# 
 
+Ex: 
 
