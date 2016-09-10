@@ -1,30 +1,95 @@
-% 
-% Info-2 / Lecture 3. 
+%
+% Info-2 / Lecture 3.
 %
 
-
-
 Today, we will be using the text editor atom and a terminal with ipython running.
+
+![atom and ipython side by side](images/usingatom.png)
+
+# modules
+
+Python's language can be augmented by new functions and object from ***modules*** (or ***packages***, or ***libraries***). They are imported with the function `import`.
+
+Example 1 (in `ipython` command line):
+
+```python
+import math
+math.sin(1.3)
+```
+
+. . .
+
+Example 2:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+plt.plot(np.sin(np.linspace(0, 6*np.pi, 500)))
+plt.show()
+```
+
+. . .
+
+Example 3:
+
+```python
+import random
+random.<TAB>
+random?
+```
+
+
+
+# Standard modules and more
+
+* Python comes with a standard library of modules:
+	https://docs.python.org/2/library/index.html
+
+* Anaconda comes with more libraries pre installed: https://docs.continuum.io/anaconda/pkg-docs
+
+* It is easy to create one's own module: having a file `mymodule.py` in the current directoy, it is possible to use `import mymodule`.
+
+
+# Playing with the turtle
+Have a look at the `turtle` module https://docs.python.org/2/library/turtle.html
+
+EX: Write the following program in atom, save it and execute it
+
+```python
+	import turtle
+	turtle.forward(100)
+	turte.left(120)
+	turtle.forward(100)
+	turtle.left(120)
+	turtle.forward(100)
+	turtle.left(120)
+	turtle.mainloop()
+```
+
+EX: Modify this program to display a regular polygon with `n` sides
+
 
 # Prime numbers
 
 Given the following function:
 
-	def is_factor(a, b):
-		return b % a == 0
+```python
+def is_factor(a, b):
+	return b % a == 0
 
-	print(is_factor(3, 27))
-	print(is_factor(3, 28))
+print(is_factor(3, 27))
+print(is_factor(3, 28))
+```
 
 Write a program that determines prime numbers between 1 and 100
 
-. . . 
+. . .
 
 # Back to automata
 
 1. Write a program that simulates the following automaton:
 
-![coin-counter](images/coin-counter.png)
+![The coin-counter](images/coin-counter.png)
 
 The input is a list a coins, e.g.,  'dime', 'quarter', 'nickel' and the program must write 'ok' if the sequence leads to the correct amount (25 cents).
 
@@ -61,9 +126,12 @@ Convert (manually) into decimal the following binary numbers:
 Let us write a function that, given the binary representation of a number as a string of '0' and '1', returns its value as a integer.
 
 
-1. Let us first suppose that we want to convert a string containing exactly 8 binary digits (e.g. '01011010') into decimal. How would you do that? 
+1. Let us first suppose that we want to convert a string containing exactly 8 binary digits (e.g. '01011010') into decimal. How would you do that?
 
 . . .
+
+
+Here is a proposal:
 
 ```python
 def todec8bits(s):
@@ -74,8 +142,7 @@ def todec8bits(s):
 todec8bits("01010101")
 ```
 
-
-Another solution demonstrating several new Pythonic constructions that we have not seen yet:
+And another solution which demonstrates several Pythonic constructions that we have not seen yet:
 
 ```python
 pow2 = [2 ** n for n in range(7, -1, -1)]
@@ -91,7 +158,6 @@ The previous codes had an issue: they only worked for 8bits numbers:
 ```python
 todec8bits("0101010")
 todec8bits("010101010")
-
 ```
 
 We should modify it to adapt to the size of the string 's'.
@@ -99,7 +165,7 @@ We should modify it to adapt to the size of the string 's'.
 Can you try?
 . . .
 
-Here is a solution:
+Here is a possible solution:
 
 ```python
 def todec(s):
@@ -111,7 +177,7 @@ def todec(s):
 
 for i in ['101', '1000', '1011', '11111111']:
 	print(todec(i))
-```	
+```
 
 ------------------------
 
@@ -136,7 +202,7 @@ print(str(d3) + str(d2) + str(d1) + str(d0))
 
 . . .
 
-```python	
+```python
 num = 17
 b0 = num % 2
 b1 = int(num/2) % 2
@@ -157,7 +223,7 @@ print(str(b8) + str(b7) +  str(b6) + str(b5) + str(b4) + str(b3) + str(b2) + str
 
 . . .
 
-```python	
+```python
 def tobin(num):
 	b7 = int(num/128) % 2
 	b6 = int(num/64)  % 2
@@ -197,7 +263,7 @@ def binary(n):
 
 Study the following code. Do you understand why it works?
 
-```
+```python
 def binary(num):
 	if num == 0:
 		return "0"
@@ -224,18 +290,23 @@ Write a recursive function that computes factorial(n)
 
 . . .
 
-Search the definition of Fibonacci sequence on the web. Program a function that returns the 'n'th Fibonacci number.
+The Fibonacci sequence is such that:
 
-. . . 
+u_0 = 1
+u_1 = 1
+u_n = u_{n-1} + u_{n-2}
+
+Program a function that returns the 'n'th Fibonacci number.
+
+. . .
 
 To go further:
 
 * If you want to know how negative integer numbers are represented, see <http://en.wikipedia.org/wiki/Two%27s_complement>
 
-* To understand how real numbers are encoded, read  [What Every Programmer Should Know About Floating-Point Arithmetic](http://floating-point-gui.de/)
-and <https://docs.python.org/2/tutorial/floatingpoint.html#tut-fp-issues>
-
-. . .
+* Type `0.1 + 0.3`
+ in the python console and be amazed. To understand what is going on, read
+[python's doc about floats] (https://docs.python.org/2/tutorial/floatingpoint.htmlhttps://docs.python.org/2/tutorial/floatingpoint.html) and [What Every Programmer Should Know About Floating-Point Arithmetic](http://floating-point-gui.de/).
 
 
 
@@ -252,7 +323,7 @@ In Python, you can know the code of a character with the function `ord`:
 
     print(ord('a'))
     print(ord('@'))
-	
+
 The inverse of `ord` is `chr`.
 
 (@) lookup the ASCII representation of  your first name in the table and use the `chr` function of Python to print it.
@@ -261,7 +332,7 @@ The inverse of `ord` is `chr`.
 
 For example, if you name is 'ZOE', you would type:
 
-	print(chr(90)+chr(79)+chr(69))
+    print(chr(90)+chr(79)+chr(69))
 
 
 
@@ -275,72 +346,76 @@ Remark: **ASCII** codes use one byte (=8bits) per character. This is fine for En
 
 
 
-# modules
-
-Python's language can be augmented by new functions and object from modules. They are imported with the function `import`.
-
-Example 1 (in `ipython` command line):
-
-    import math 
-	math.sin(1.3)
-
-Example 2:
-
-	import numpy as np
-	import matplotlib.pyplot as plt
-	plt.plot(np.sin(np.linspace(0, 6*np.pi, 500)))
-	plt.show()
-
-Example 3: 
-
-	import random
-	random.<TAB>
-	random?
-	
-
-Note: It is easy to create one's own module: having a file `mymodule.py` in the current directory, it is possible to use `import mymodule`.
-
-Have a look at the `turtle` module https://docs.python.org/2/library/turtle.html
-
-EX: Write the following program in atom, save it and execute it
-
-	import turtle
-	turtle.forward(100)
-	turtle.left(120)
-	turtle.forward(100)
-	turtle.left(120)
-	turtle.forward(100)
-	turtle.left(120)
-	turtle.mainloop()
-	
-EX: Modify this program to display a regular polygon with `n` sides
-
 # A few useful functions on strings
 
-	a = "Bonjour Jean"
-	len(a)
-	a[2:4]
-	
-	a.replace("Jean", "Marc")
-	a
-	b = a.replace("Jean", "Marc")
-	
-	a = "caillou, genou, bijou"
-	a.split(",")
-	
-	b= ['alpha', 'beta', 'gamma']
-	";".join(b)
+```python
+a = "Bonjour Jean"
+len(a)
+a[2:4]
 
-# 
+a.replace("Jean", "Marc")
+a
+b = a.replace("Jean", "Marc")
+
+a = "caillou, genou, bijou"
+a.split(",")
+
+b= ['alpha', 'beta', 'gamma']
+";".join(b)
+```
+
+# lists and dictionaries
+
+```python
+mylist1 = ['alpha', 'beta', 'gamma']
+mylist2 = [1, 2, 3]
+for i in range(len(list1)):
+	print(mylist1[i], mylist2[i])
+```
+
+Note: remember `zip`?
+
+```python
+mydict = { 'alpha':1, 'beta':2, 'gamma':3}
+for i, v in mydict:
+	print i, v
+```
+
+You can think of dictionaries as functions from keys to values.
+
+. . .
+
+EX: Given a list of words, write a program that find which are anagrams
 
 
 
-EX: Compute all anagrams of a word. 
+# Reading and writing files
 
-# Test Files
+Create a file containing a few lines of text with atom and save it under the name `myfile.txt`.
 
-Read a list of French words and check.
+Execute the code:
+
+```python
+inputFile = file(‘myfile.txt’)
+for lines in inputFile:
+	print lines
+```
+. . .
+
+Write a function `count-words` that counts the number of words in myfile.txt
+
+. . .
+
+Remark: with the module `sys`, you can read argument on the command line.
+
+```python
+import sys
+fname = sys.argv[1]
+print(count_words(fname))
+```
 
 
+Read the file  http://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txthttp://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txt
+using the function `urllib2.urlopen`
 
-
+EX: Find all anagrams in English
