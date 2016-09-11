@@ -413,6 +413,7 @@ __________________________________________________
  * double click on `XQuartz-2.7.9.dmg` in your `Downloads` folder or wherever you downloaded it.
  * double click on the `XQuartz.pkg`
  * click on `Continue` and `Agree` until you can click on `Install`
+ * log out and back in if requested to do so
 
 ### Git
 0. Set up an account on Github.com
@@ -780,6 +781,17 @@ shortcut `ctrl + D`
      ```
      import expyriment
      ```
+
+If you see the following error message
+
+    ImportError: libSDL_mixer-1.2.so.0: cannot open shared object file: No such file or directory
+
+
+Then type the following command in a terminal:
+
+    sudo apt-get install libsdl-mixer1.2
+
+And start again.
 
      ```
      exp = expyriment.design.Experiment(name="test")

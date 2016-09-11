@@ -8,3 +8,5 @@ Python Programming challenges
 3. Solve the connectivity problem (see [figure](pb-de-connexité.jpg))
 
 4. Implement a simulator of a Turing machine (see Roger Penrose's [chapter's on Turing machines](../books/Penrose_Turing-machines.pdf))
+
+5. Get textual data from the Internet, estimate word transition probabilities and generate random text:  http://rpubs.com/ewan_dunbar/206871

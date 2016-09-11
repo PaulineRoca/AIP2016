@@ -1,9 +1,31 @@
 <h1>>HTML files:</h1>
-* <a href=./00_installation/install.html>./00_installation/install.html</a>
+* <a href=./00_Installation/install.html>./00_Installation/install.html</a>
+* <a href=./01_Starting-from-Scratch/Starting-from-Scratch-doc.html>./01_Starting-from-Scratch/Starting-from-Scratch-doc.html</a>
+* <a href=./01_Starting-from-Scratch/Starting-from-Scratch-slides.html>./01_Starting-from-Scratch/Starting-from-Scratch-slides.html</a>
+* <a href=./02_How-computers-work/how-computers-work-doc.html>./02_How-computers-work/how-computers-work-doc.html</a>
+* <a href=./02_How-computers-work/how-computers-work-slides.html>./02_How-computers-work/how-computers-work-slides.html</a>
+* <a href=./03_How-to_interact_with_a_computer/command_line-doc.html>./03_How-to_interact_with_a_computer/command_line-doc.html</a>
+* <a href=./03_How-to_interact_with_a_computer/command_line-slides.html>./03_How-to_interact_with_a_computer/command_line-slides.html</a>
+* <a href=./04_Python_in_a_nutshell/Python_in_a_nutshell-doc.html>./04_Python_in_a_nutshell/Python_in_a_nutshell-doc.html</a>
+* <a href=./04_Python_in_a_nutshell/Python_in_a_nutshell-slides.html>./04_Python_in_a_nutshell/Python_in_a_nutshell-slides.html</a>
+* <a href=./06_Representation_of_numbers_images_text/representing_numbers_images_text_new-doc.html>./06_Representation_of_numbers_images_text/representing_numbers_images_text_new-doc.html</a>
+* <a href=./06_Representation_of_numbers_images_text/representing_numbers_images_text_new-slides.html>./06_Representation_of_numbers_images_text/representing_numbers_images_text_new-slides.html</a>
+* <a href=./doclist.html>./doclist.html</a>
+* <a href=./git_version_control/git-example1.html>./git_version_control/git-example1.html</a>
+* <a href=./howtos/how-to-get-the-lectures-materials.html>./howtos/how-to-get-the-lectures-materials.html</a>
+* <a href=./howtos/how-to-open-a-terminal.html>./howtos/how-to-open-a-terminal.html</a>
+* <a href=./programming-challenges/challenges.html>./programming-challenges/challenges.html</a>
 * <a href=./quizz/quizz.html>./quizz/quizz.html</a>
 * <a href=./README.html>./README.html</a>
 <h1>>PDFs:</h1>
-* <a href=./00_installation/install.pdf>./00_installation/install.pdf</a>
+* <a href=./00_Installation/install.pdf>./00_Installation/install.pdf</a>
+* <a href=./02_How-computers-work/images/visual-english.pdf>./02_How-computers-work/images/visual-english.pdf</a>
+* <a href=./books/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf>./books/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf</a>
+* <a href=./books/How-computers_work.pdf>./books/How-computers_work.pdf</a>
+* <a href=./books/Penrose_Turing-machines.pdf>./books/Penrose_Turing-machines.pdf</a>
+* <a href=./howtos/how-to-get-the-lectures-materials.pdf>./howtos/how-to-get-the-lectures-materials.pdf</a>
+* <a href=./howtos/how-to-open-a-terminal.pdf>./howtos/how-to-open-a-terminal.pdf</a>
+* <a href=./programming-challenges/challenges.pdf>./programming-challenges/challenges.pdf</a>
 * <a href=./quizz/quizz0.pdf>./quizz/quizz0.pdf</a>
 * <a href=./quizz/quizz1.pdf>./quizz/quizz1.pdf</a>
 * <a href=./quizz/quizz.pdf>./quizz/quizz.pdf</a>
