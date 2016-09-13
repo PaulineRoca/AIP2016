@@ -69,6 +69,22 @@ EX: Write the following program in atom, save it and execute it
 EX: Modify this program to display a regular polygon with `n` sides
 
 
+
+
+# Back to automata
+
+1. Write a program that simulates the following automaton:
+
+![The coin-counter](images/coin-counter.png)
+
+The input is a list a coins, e.g.,  'dime', 'quarter', 'nickel' and the program must write 'ok' if the sequence leads to the correct amount (25 cents).
+
+. . .
+
+2. Write a program that recognizes if a character string conforms to the pattern HA!, HAHA!, HAHAHA!, ...
+
+. . .
+
 # Prime numbers
 
 Given the following function:
@@ -85,21 +101,8 @@ Write a program that determines prime numbers between 1 and 100
 
 . . .
 
-# Back to automata
 
-1. Write a program that simulates the following automaton:
-
-![The coin-counter](images/coin-counter.png)
-
-The input is a list a coins, e.g.,  'dime', 'quarter', 'nickel' and the program must write 'ok' if the sequence leads to the correct amount (25 cents).
-
-. . .
-
-2. Write a program that recognizes if a character string conforms to the pattern HA!, HAHA!, HAHAHA!, ...
-
-. . .
-
-# Representing number in binary
+# Representing numbers in binary
 
 Remember that a number represented by four digits "d3 d2 d1 d0" in a basis 'b', has a value of d3*b^3 + d2*b^2 + d1*b^1 + d0*b^0
 
@@ -118,14 +121,14 @@ Convert (manually) into decimal the following binary numbers:
 
 . . .
 
-*Answer:* 5, 8, 11, 255
+*Answer:* 101 = 5, 1000 = 8, 1011 = 11, 11111111 = 255
 
 ## From  binary to decimal
 
 
 Let us write a function that, given the binary representation of a number as a string of '0' and '1', returns its value as a integer.
 
-
+y
 1. Let us first suppose that we want to convert a string containing exactly 8 binary digits (e.g. '01011010') into decimal. How would you do that?
 
 . . .
@@ -151,9 +154,12 @@ for b, p in zip(s, pow2):
 	n += int(b) * p
 print(n)
 ```
+
+Can you see see why it works?
+
 . . .
 
-The previous codes had an issue: they only worked for 8bits numbers:
+The previous codes had an issue: they only worked for  numbers with exactly 8 bits:
 
 ```python
 todec8bits("0101010")
@@ -406,6 +412,14 @@ Write a function `count-words` that counts the number of words in myfile.txt
 
 . . .
 
+# csv files
+
+1. Create a spreadsheet document, e.g. with Excel or OpenOffice Numeric, with a few lines and names in column 1 and numbers in column 2.
+2. save in it .csv (comma separated value) format and open it with a text editor  atom
+3. Write a python script that reads the file and sums the numbers from column 2
+
+. . .
+
 Remark: with the module `sys`, you can read argument on the command line.
 
 ```python
@@ -414,8 +428,8 @@ fname = sys.argv[1]
 print(count_words(fname))
 ```
 
+# Anagrams
 
-Read the file  http://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txthttp://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txt
-using the function `urllib2.urlopen`
+Read the file  http://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txt using the function `urllib2.urlopen`
 
-EX: Find all anagrams in English
+Exercice: Find all the anagrams in English

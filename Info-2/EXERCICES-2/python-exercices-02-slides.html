@@ -82,16 +82,6 @@ random?</code></pre>
     turtle.mainloop()</code></pre>
 <p>EX: Modify this program to display a regular polygon with <code>n</code> sides</p>
 </div>
-<div id="prime-numbers" class="slide section level1">
-<h1><a href="#prime-numbers">Prime numbers</a></h1>
-<p>Given the following function:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> is_factor(a, b):
-    <span class="kw">return</span> b % a == <span class="dv">0</span>
-
-<span class="dt">print</span>(is_factor(<span class="dv">3</span>, <span class="dv">27</span>))
-<span class="dt">print</span>(is_factor(<span class="dv">3</span>, <span class="dv">28</span>))</code></pre>
-<p>Write a program that determines prime numbers between 1 and 100</p>
-</div>
 <div id="back-to-automata" class="slide section level1">
 <h1><a href="#back-to-automata">Back to automata</a></h1>
 <ol style="list-style-type: decimal">
@@ -107,8 +97,18 @@ random?</code></pre>
 </ol>
 </div>
 </div>
-<div id="representing-number-in-binary" class="slide section level1">
-<h1><a href="#representing-number-in-binary">Representing number in binary</a></h1>
+<div id="prime-numbers" class="slide section level1">
+<h1><a href="#prime-numbers">Prime numbers</a></h1>
+<p>Given the following function:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> is_factor(a, b):
+    <span class="kw">return</span> b % a == <span class="dv">0</span>
+
+<span class="dt">print</span>(is_factor(<span class="dv">3</span>, <span class="dv">27</span>))
+<span class="dt">print</span>(is_factor(<span class="dv">3</span>, <span class="dv">28</span>))</code></pre>
+<p>Write a program that determines prime numbers between 1 and 100</p>
+</div>
+<div id="representing-numbers-in-binary" class="slide section level1">
+<h1><a href="#representing-numbers-in-binary">Representing numbers in binary</a></h1>
 <p>Remember that a number represented by four digits “d3 d2 d1 d0” in a basis ‘b’, has a value of d3<em>b^3 + d2</em>b^2 + d1<em>b^1 + d0</em>b^0</p>
 <ul>
 <li>In binary, there are only two possibilities for the digits: {0,1}</li>
@@ -118,12 +118,10 @@ random?</code></pre>
 <p>To learn more about how integer numbers are represented in binary format, you can check out <a href="http://csunplugged.org/binary-numbers">http://csunplugged.org/binary-numbers</a></p>
 <p>Convert (manually) into decimal the following binary numbers: - 101 - 1000 - 1011 - 11111111</p>
 <div class="incremental">
-<p><em>Answer:</em> 5, 8, 11, 255</p>
+<p><em>Answer:</em> 101 = 5, 1000 = 8, 1011 = 11, 11111111 = 255</p>
 <h2 id="from-binary-to-decimal"><a href="#from-binary-to-decimal">From binary to decimal</a></h2>
 <p>Let us write a function that, given the binary representation of a number as a string of ‘0’ and ‘1’, returns its value as a integer.</p>
-<ol style="list-style-type: decimal">
-<li>Let us first suppose that we want to convert a string containing exactly 8 binary digits (e.g. ‘01011010’) into decimal. How would you do that?</li>
-</ol>
+<p>y 1. Let us first suppose that we want to convert a string containing exactly 8 binary digits (e.g. ‘01011010’) into decimal. How would you do that?</p>
 <p>. . .</p>
 <p>Here is a proposal:</p>
 <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> todec8bits(s):
@@ -138,8 +136,9 @@ n = <span class="dv">0</span>
 <span class="kw">for</span> b, p in <span class="dt">zip</span>(s, pow2):
     n += <span class="dt">int</span>(b) * p
 <span class="dt">print</span>(n)</code></pre>
+<p>Can you see see why it works?</p>
 <p>. . .</p>
-<p>The previous codes had an issue: they only worked for 8bits numbers:</p>
+<p>The previous codes had an issue: they only worked for numbers with exactly 8 bits:</p>
 <pre class="sourceCode python"><code class="sourceCode python">todec8bits(<span class="st">&quot;0101010&quot;</span>)
 todec8bits(<span class="st">&quot;010101010&quot;</span>)</code></pre>
 <p>We should modify it to adapt to the size of the string ‘s’.</p>
@@ -304,14 +303,25 @@ mylist2 = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv
 <div class="incremental">
 <p>Write a function <code>count-words</code> that counts the number of words in myfile.txt</p>
 </div>
+</div>
+<div id="csv-files" class="slide section level1">
+<h1><a href="#csv-files">csv files</a></h1>
+<ol style="list-style-type: decimal">
+<li>Create a spreadsheet document, e.g. with Excel or OpenOffice Numeric, with a few lines and names in column 1 and numbers in column 2.</li>
+<li>save in it .csv (comma separated value) format and open it with a text editor atom</li>
+<li>Write a python script that reads the file and sums the numbers from column 2</li>
+</ol>
 <div class="incremental">
 <p>Remark: with the module <code>sys</code>, you can read argument on the command line.</p>
 <pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> sys
 fname = sys.argv[<span class="dv">1</span>]
 <span class="dt">print</span>(count_words(fname))</code></pre>
-<p>Read the file http://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txthttp://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txt using the function <code>urllib2.urlopen</code></p>
-<p>EX: Find all anagrams in English</p>
 </div>
+</div>
+<div id="anagrams" class="slide section level1">
+<h1><a href="#anagrams">Anagrams</a></h1>
+<p>Read the file http://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txt using the function <code>urllib2.urlopen</code></p>
+<p>Exercice: Find all the anagrams in English</p>
 </div>
 </body>
 </html>
