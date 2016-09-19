@@ -391,8 +391,22 @@ You can think of dictionaries as functions from keys to values.
 
 . . .
 
-EX: Given a list of words, write a program that find which are anagrams
+Exercice: Given a list of words, write a program that find which are anagrams
 
+
+...
+
+```python
+def anagrams(wordlist):
+    anagrams = {}
+    for w in wordlist:
+        key = str(sorted(w))
+        if key in anagrams: anagrams[key].append(w)
+        else: anagrams[key] = [ w ]
+    return [ l for l in anagrams.itervalues() if len(l) > 1 ]
+
+print(anagrams(['ab','ba','cd','ef','gh','hg']))
+```
 
 
 # Reading and writing files
@@ -408,9 +422,89 @@ for lines in inputFile:
 ```
 . . .
 
-Write a function `count-words` that counts the number of words in myfile.txt
+Write a program `count-words` that counts the number of lines and the number of words in a text file.
+
+Note: Use the module `sys`, and the variable `sys.argv`to read the name of the text file from the command line.
 
 . . .
+
+```python
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys 
+
+def count_words(text):
+	nlines, nwords = 0, 0
+	for line in file(filename):
+		nlines += 1
+		nwords += len(line.split())
+	return (nlines, nwords)	
+
+if __name__ == '__main__':
+	fname = sys.argv[1]
+	text = file.fnames.readlines()
+	print(count_words(text))
+```
+
+...
+
+Ex: Write a program that computes the number of occurences of words in a text file
+
+
+```python
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys 
+
+def words_freq(text):
+    """ input:
+              text: a list of strings
+        output:
+              the number of occurences of each words in text
+    """
+    freqs = {}
+    for l in text:
+        for w in l.strip().split():
+            if w in freqs: 
+                freqs[w] += 1
+            else: 
+                freqs[w] = 1
+    return freqs	
+
+
+if __name__ == '__main__':
+	fname = sys.argv[1]
+	text = file(fname).readlines()
+	print(words_freq(text))
+```
+
+Ex: modify the preceding program to plot Zipf's curve (see https://en.wikipedia.org/wiki/Zipf%27s_law)
+
+. . . 
+
+
+Create a file `zipf.py` with the text below and import it in the preceding code. 
+
+
+```python
+import matplotlib.pyplot as plt
+
+def zipf_plot(freqs):
+    """ input:
+            freqs: list of integers
+        output:
+            None
+        display Zipf's graphics (see https://en.wikipedia.org/wiki/Zipf%27s_law)
+    """
+    n = sorted(freqs, reverse = True)
+    plt.figure()
+    plt.loglog()
+    plt.plot(n)
+    plt.show()
+```
+
 
 # csv files
 
@@ -420,16 +514,59 @@ Write a function `count-words` that counts the number of words in myfile.txt
 
 . . .
 
-Remark: with the module `sys`, you can read argument on the command line.
-
 ```python
-import sys
-fname = sys.argv[1]
-print(count_words(fname))
+sum = 0
+for l in file('mynumbers.csv'):
+	l2 = l.strip()  # remove end of line
+	if len(l2) > 0 : # avoid empty lines
+		c1, c2 = l2.split(',')
+		sum += float(c2)
+print(sum)
 ```
 
-# Anagrams
+. . .
 
-Read the file  http://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txt using the function `urllib2.urlopen`
+In real life, this kind of job is handled with the module `pandas`
 
-Exercice: Find all the anagrams in English
+```python
+f = pandas.read_csv('mynumbers.csv', header=None, delimiter=',')
+f[1].sum()
+```
+
+# Anagrams of English
+
+Download the file  http://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txt and find all the anagrams in English
+
+. . .
+
+A possible program follows, with is meant to be run on the command line with the argument `american-english.txt`.
+
+```python
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys
+
+def anagrams(wordlist):
+    """ input:
+            wordlist: a list of strings (words)
+        output:
+            a list of lists of words that have the same letters
+    """
+    anagrams = {}
+    for w in wordlist:
+        key = str(sorted(w))
+        if key in anagrams: anagrams[key].append(w)
+        else: anagrams[key] = [ w ]
+    return [ l for l in anagrams.itervalues() if len(l) > 1 ]
+
+
+if __name__ == '__main__':
+    # the input is a text file with one word per line
+    text = [ l.strip() for l in file(sys.argv[1]).readlines() if l != '\n']
+    print(anagrams(text))
+```
+
+. . . 
+
+Exercice: modify the preceding program to read the file directly from the internet, using the module `urllib2`

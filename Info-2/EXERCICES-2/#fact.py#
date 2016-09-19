@@ -1,0 +1,15 @@
+def fact1(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fact(n - 1)
+
+
+factorials = []
+
+def fact2(n):
+    if n < len(factorials):
+        return factorials[n]
+    
+
+    

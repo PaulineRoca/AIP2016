@@ -290,7 +290,17 @@ mylist2 = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv
     <span class="dt">print</span> i, v</code></pre>
 <p>You can think of dictionaries as functions from keys to values.</p>
 <div class="incremental">
-<p>EX: Given a list of words, write a program that find which are anagrams</p>
+<p>Exercice: Given a list of words, write a program that find which are anagrams</p>
+<p>…</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> anagrams(wordlist):
+    anagrams = {}
+    <span class="kw">for</span> w in wordlist:
+        key = <span class="dt">str</span>(<span class="dt">sorted</span>(w))
+        <span class="kw">if</span> key in anagrams: anagrams[key].append(w)
+        <span class="kw">else</span>: anagrams[key] = [ w ]
+    <span class="kw">return</span> [ l <span class="kw">for</span> l in anagrams.itervalues() <span class="kw">if</span> <span class="dt">len</span>(l) &gt; <span class="dv">1</span> ]
+
+<span class="dt">print</span>(anagrams([<span class="st">&#39;ab&#39;</span>,<span class="st">&#39;ba&#39;</span>,<span class="st">&#39;cd&#39;</span>,<span class="st">&#39;ef&#39;</span>,<span class="st">&#39;gh&#39;</span>,<span class="st">&#39;hg&#39;</span>]))</code></pre>
 </div>
 </div>
 <div id="reading-and-writing-files" class="slide section level1">
@@ -301,7 +311,71 @@ mylist2 = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv
 <span class="kw">for</span> lines in inputFile:
     <span class="dt">print</span> lines</code></pre>
 <div class="incremental">
-<p>Write a function <code>count-words</code> that counts the number of words in myfile.txt</p>
+<p>Write a program <code>count-words</code> that counts the number of lines and the number of words in a text file.</p>
+<p>Note: Use the module <code>sys</code>, and the variable <code>sys.argv</code>to read the name of the text file from the command line.</p>
+</div>
+<div class="incremental">
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co">#! /usr/bin/env python</span>
+<span class="co"># -*- coding: utf-8 -*-</span>
+
+<span class="ch">import</span> sys 
+
+<span class="kw">def</span> count_words(text):
+    nlines, nwords = <span class="dv">0</span>, <span class="dv">0</span>
+    <span class="kw">for</span> line in <span class="dt">file</span>(filename):
+        nlines += <span class="dv">1</span>
+        nwords += <span class="dt">len</span>(line.split())
+    <span class="kw">return</span> (nlines, nwords) 
+
+<span class="kw">if</span> <span class="ot">__name__</span> == <span class="st">&#39;__main__&#39;</span>:
+    fname = sys.argv[<span class="dv">1</span>]
+    text = <span class="dt">file</span>.fnames.readlines()
+    <span class="dt">print</span>(count_words(text))</code></pre>
+<p>…</p>
+<p>Ex: Write a program that computes the number of occurences of words in a text file</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co">#! /usr/bin/env python</span>
+<span class="co"># -*- coding: utf-8 -*-</span>
+
+<span class="ch">import</span> sys 
+
+<span class="kw">def</span> words_freq(text):
+    <span class="co">&quot;&quot;&quot; input:</span>
+<span class="co">              text: a list of strings</span>
+<span class="co">        output:</span>
+<span class="co">              the number of occurences of each words in text</span>
+<span class="co">    &quot;&quot;&quot;</span>
+    freqs = {}
+    <span class="kw">for</span> l in text:
+        <span class="kw">for</span> w in l.strip().split():
+            <span class="kw">if</span> w in freqs: 
+                freqs[w] += <span class="dv">1</span>
+            <span class="kw">else</span>: 
+                freqs[w] = <span class="dv">1</span>
+    <span class="kw">return</span> freqs    
+
+
+<span class="kw">if</span> <span class="ot">__name__</span> == <span class="st">&#39;__main__&#39;</span>:
+    fname = sys.argv[<span class="dv">1</span>]
+    text = <span class="dt">file</span>(fname).readlines()
+    <span class="dt">print</span>(words_freq(text))</code></pre>
+<p>Ex: modify the preceding program to plot Zipf’s curve (see https://en.wikipedia.org/wiki/Zipf%27s_law)</p>
+</div>
+<div class="incremental">
+<p>Create a file <code>zipf.py</code> with the text below and import it in the preceding code.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> matplotlib.pyplot <span class="ch">as</span> plt
+
+<span class="kw">def</span> zipf_plot(freqs):
+    <span class="co">&quot;&quot;&quot; input:</span>
+<span class="co">            freqs: list of integers</span>
+<span class="co">        output:</span>
+<span class="co">            None</span>
+<span class="co">        display Zipf&#39;s graphics (see https://en.wikipedia.org/wiki/Zipf%27s_law)</span>
+<span class="co">    &quot;&quot;&quot;</span>
+    n = <span class="dt">sorted</span>(freqs, reverse = <span class="ot">True</span>)
+    plt.figure()
+    plt.loglog()
+    plt.plot(n)
+    plt.show()</code></pre>
 </div>
 </div>
 <div id="csv-files" class="slide section level1">
@@ -312,16 +386,52 @@ mylist2 = [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv
 <li>Write a python script that reads the file and sums the numbers from column 2</li>
 </ol>
 <div class="incremental">
-<p>Remark: with the module <code>sys</code>, you can read argument on the command line.</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> sys
-fname = sys.argv[<span class="dv">1</span>]
-<span class="dt">print</span>(count_words(fname))</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="dt">sum</span> = <span class="dv">0</span>
+<span class="kw">for</span> l in <span class="dt">file</span>(<span class="st">&#39;mynumbers.csv&#39;</span>):
+    l2 = l.strip()  <span class="co"># remove end of line</span>
+    <span class="kw">if</span> <span class="dt">len</span>(l2) &gt; <span class="dv">0</span> : <span class="co"># avoid empty lines</span>
+        c1, c2 = l2.split(<span class="st">&#39;,&#39;</span>)
+        <span class="dt">sum</span> += <span class="dt">float</span>(c2)
+<span class="dt">print</span>(<span class="dt">sum</span>)</code></pre>
+</div>
+<div class="incremental">
+<p>In real life, this kind of job is handled with the module <code>pandas</code></p>
+<pre class="sourceCode python"><code class="sourceCode python">f = pandas.read_csv(<span class="st">&#39;mynumbers.csv&#39;</span>, header=<span class="ot">None</span>, delimiter=<span class="st">&#39;,&#39;</span>)
+f[<span class="dv">1</span>].<span class="dt">sum</span>()</code></pre>
 </div>
 </div>
-<div id="anagrams" class="slide section level1">
-<h1><a href="#anagrams">Anagrams</a></h1>
-<p>Read the file http://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txt using the function <code>urllib2.urlopen</code></p>
-<p>Exercice: Find all the anagrams in English</p>
+<div id="anagrams-of-english" class="slide section level1">
+<h1><a href="#anagrams-of-english">Anagrams of English</a></h1>
+<p>Download the file http://pallier.org/ressources/AIP2016/Info-2/EXERCICES-2/american-english.txt and find all the anagrams in English</p>
+<div class="incremental">
+<p>A possible program follows, with is meant to be run on the command line with the argument <code>american-english.txt</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co">#! /usr/bin/env python</span>
+<span class="co"># -*- coding: utf-8 -*-</span>
+
+<span class="ch">import</span> sys
+
+<span class="kw">def</span> anagrams(wordlist):
+    <span class="co">&quot;&quot;&quot; input:</span>
+<span class="co">            wordlist: a list of strings (words)</span>
+<span class="co">        output:</span>
+<span class="co">            a list of lists of words that have the same letters</span>
+<span class="co">    &quot;&quot;&quot;</span>
+    anagrams = {}
+    <span class="kw">for</span> w in wordlist:
+        key = <span class="dt">str</span>(<span class="dt">sorted</span>(w))
+        <span class="kw">if</span> key in anagrams: anagrams[key].append(w)
+        <span class="kw">else</span>: anagrams[key] = [ w ]
+    <span class="kw">return</span> [ l <span class="kw">for</span> l in anagrams.itervalues() <span class="kw">if</span> <span class="dt">len</span>(l) &gt; <span class="dv">1</span> ]
+
+
+<span class="kw">if</span> <span class="ot">__name__</span> == <span class="st">&#39;__main__&#39;</span>:
+    <span class="co"># the input is a text file with one word per line</span>
+    text = [ l.strip() <span class="kw">for</span> l in <span class="dt">file</span>(sys.argv[<span class="dv">1</span>]).readlines() <span class="kw">if</span> l != <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>]
+    <span class="dt">print</span>(anagrams(text))</code></pre>
+</div>
+<div class="incremental">
+<p>Exercice: modify the preceding program to read the file directly from the internet, using the module <code>urllib2</code></p>
+</div>
 </div>
 </body>
 </html>
